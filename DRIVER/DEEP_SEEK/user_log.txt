@@ -1,0 +1,7 @@
+ollama run hf.co/TheBloke/deepseek-llm-7B-chat-GGUF:Q4_K_S
+// this is for test if acceptable. we will using it as our AI
+// or we have to choose the fucking 1.5b
+// or even give up
+// why not orange pi5?????
+// they must know rasp pi was a rabish 
+// not cheap ,high power consuming, and slow.
