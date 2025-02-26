@@ -1,17 +1,17 @@
+#include "weather.h"
 #include <iostream>
 #include <curl/curl.h>
 #include <jsoncpp/json/json.h>
 #include <map>
 #include <ctime>
 #include <iomanip>
-#include <thread>
-#include <chrono>
 
 using namespace std;
 
 const string API_KEY = "fe43e68f9ac2ce5e9488824dea81a02c";  // OpenWeather API Key
 const string CITY = "Glasgow";  // 查询天气的城市
 
+// **HTTP 请求回调函数**（用于接收 API 响应数据）
 size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
     size_t totalSize = size * nmemb;
     output->append((char*)contents, totalSize);
@@ -45,81 +45,74 @@ string timestampToDate(time_t timestamp) {
 /*
    选择 Weather API 的原因：
    1. Weather API 提供的是 "实时天气数据"，可以获取当前温度、湿度、风速等信息。
-   2. Forecast API 主要用于未来天气预测，而不能提供精确的 "实时温度"。
+   2. Forecast API 主要用于未来天气预测，无法提供 "实时温度"。
 
-   线程管理：
-   - 该函数运行在独立的线程中，每 30 分钟自动获取一次最新天气。
-   - 使用 `this_thread::sleep_for()` 休眠 30 分钟，不阻塞主线程。
+   为什么返回 WeatherData 结构体？
+   - 这样可以方便其他代码调用，而不仅仅是输出到终端。
 */
-void getCurrentWeather() {
+WeatherData getCurrentWeather() {
     string url = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY +
                  "&appid=" + API_KEY + "&units=metric";
 
     string weatherData = fetchWeatherData(url);
-    if (weatherData.empty()) return;
+    if (weatherData.empty()) return {"", "", 0.0, 0, 0.0};
 
     Json::Reader reader;
     Json::Value jsonWeather;
-    if (!reader.parse(weatherData, jsonWeather)) return;
+    if (!reader.parse(weatherData, jsonWeather)) return {"", "", 0.0, 0, 0.0};
 
-    time_t timestamp = jsonWeather["dt"].asLargestInt();
-    string date = timestampToDate(timestamp);
-    string description = jsonWeather["weather"][0]["description"].asString();
-    float temp = jsonWeather["main"]["temp"].asFloat();
-    int humidity = jsonWeather["main"]["humidity"].asInt();
-    float windSpeed = jsonWeather["wind"]["speed"].asFloat();
+    WeatherData data;
+    data.date = timestampToDate(jsonWeather["dt"].asLargestInt());
+    data.description = jsonWeather["weather"][0]["description"].asString();
+    data.temperature = jsonWeather["main"]["temp"].asFloat();
+    data.humidity = jsonWeather["main"]["humidity"].asInt();
+    data.windSpeed = jsonWeather["wind"]["speed"].asFloat();
 
     cout << "Current Weather:" << endl;
-    cout << "Date: " << date << endl;
-    cout << "Weather: " << description << endl;
-    cout << "Temperature: " << temp << "°C" << endl;
-    cout << "Humidity: " << humidity << "%" << endl;
-    cout << "Wind Speed: " << windSpeed << " m/s" << endl;
+    cout << "Date: " << data.date << endl;
+    cout << "Weather: " << data.description << endl;
+    cout << "Temperature: " << data.temperature << "°C" << endl;
+    cout << "Humidity: " << data.humidity << "%" << endl;
+    cout << "Wind Speed: " << data.windSpeed << " m/s" << endl;
     cout << "--------------------------------------" << endl;
+
+    return data;
 }
 
 // **获取未来 3 天的天气预报**
 /*
    选择 Forecast API 的原因：
-   1. Forecast API 提供未来 5 天的天气预报，每天 8 个时间点（间隔 3 小时）。
-   2. 通过遍历 8 个数据点，可以计算出一天内的 "最高温度" 和 "最低温度"。
-   3. 直接使用 Forecast API 提供的 temp_min / temp_max 数据可能不准确，因此需要手动计算。
+   1. 提供未来 5 天的天气，每天 8 个数据点（每 3 小时更新一次）。
+   2. 通过遍历数据，可以计算 "最高温度" 和 "最低温度"。
 
    计算 min/max 温度的方法：
    1. 遍历 API 返回的 `list`（未来 5 天，每 3 小时的数据）。
-   2. 统计每一天的 8 个数据点，计算最小温度和最大温度。
+   2. 统计每天的 8 个数据点，计算最高温度和最低温度。
    3. 只显示未来 3 天的数据，不包括今天。
-
-   线程管理：
-   - 该函数运行在独立的线程中，每 12 小时自动更新一次天气预报。
 */
-void getWeatherForecast() {
+map<string, pair<float, float>> getWeatherForecast() {
     string url = "https://api.openweathermap.org/data/2.5/forecast?q=" + CITY +
                  "&appid=" + API_KEY + "&units=metric";
 
     string forecastData = fetchWeatherData(url);
-    if (forecastData.empty()) return;
+    if (forecastData.empty()) return {};
 
     Json::Reader reader;
     Json::Value jsonForecast;
-    if (!reader.parse(forecastData, jsonForecast)) return;
+    if (!reader.parse(forecastData, jsonForecast)) return {};
 
     string today = timestampToDate(time(nullptr));
     map<string, pair<float, float>> dailyTemps;
-    map<string, string> weatherDescriptions;
 
     for (const auto& item : jsonForecast["list"]) {
         string date = timestampToDate(item["dt"].asLargestInt());
-        if (date <= today) continue;  // 跳过今天的数据
-        if (dailyTemps.size() >= 3) break;  // 只保留未来 3 天
+        if (date <= today) continue;
+        if (dailyTemps.size() >= 3) break;
 
         float temp = item["main"]["temp"].asFloat();
-        string description = item["weather"][0]["description"].asString();
 
-        // 计算一天内的 min/max 温度
         if (dailyTemps.find(date) == dailyTemps.end()) {
-            dailyTemps[date] = {temp, temp};  // 初始化 min/max
-            weatherDescriptions[date] = description;
+            dailyTemps[date] = {temp, temp};
         } else {
             dailyTemps[date].first = min(dailyTemps[date].first, temp);
             dailyTemps[date].second = max(dailyTemps[date].second, temp);
@@ -129,50 +122,9 @@ void getWeatherForecast() {
     cout << "3-Day Weather Forecast:" << endl;
     for (const auto& [date, temps] : dailyTemps) {
         cout << "Date: " << date
-             << "  Weather: " << weatherDescriptions[date]
              << "  Temperature: " << temps.first << "°C ~ " << temps.second << "°C" << endl;
     }
     cout << "--------------------------------------" << endl;
-}
 
-// **线程管理**
-/*
-   线程设计：
-   - `startWeatherUpdates()` 在独立线程中运行，每 30 分钟获取一次当前天气。
-   - `startForecastUpdates()` 在独立线程中运行，每 12 小时获取一次天气预报。
-   - `main()` 线程不会被阻塞，确保程序持续运行。
-
- 为什么不用计时器？
-   - 传统计时器（如 `setTimeout()`）可能阻塞主线程，影响性能。
-   - `this_thread::sleep_for()` 让线程自己休眠，不影响主线程运行。
-*/
-
-// **定时获取当前天气**
-void startWeatherUpdates() {
-    while (true) {
-        getCurrentWeather();
-        this_thread::sleep_for(chrono::minutes(30));
-    }
-}
-
-// **定时获取天气预报**
-void startForecastUpdates() {
-    while (true) {
-        getWeatherForecast();
-        this_thread::sleep_for(chrono::hours(12));
-    }
-}
-
-// **主函数**
-int main() {
-    thread weatherThread(startWeatherUpdates);
-    thread forecastThread(startForecastUpdates);
-    weatherThread.detach();
-    forecastThread.detach();
-
-    while (true) {
-        this_thread::sleep_for(chrono::hours(1));
-    }
-
-    return 0;
+    return dailyTemps;
 }
