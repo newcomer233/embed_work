@@ -70,9 +70,9 @@ bool isHumanVoice(const vector<unsigned char>& audioData) {
         return false;
     }
 
-    WebRtcVad_set_mode(vad, 0); // 📌 **使用最严格模式，避免误判**
+    WebRtcVad_set_mode(vad, 0);
 
-    // **转换为 16-bit PCM**
+    // 转换为16-bit PCM
     vector<int16_t> pcmAudio(audioData.size() / sizeof(int16_t));
     memcpy(pcmAudio.data(), audioData.data(), audioData.size());
 
@@ -98,7 +98,7 @@ bool isHumanVoice(const vector<unsigned char>& audioData) {
     return hasVoice;
 }
 
-
+//录音 
 void recordAudio() {
     system(("rec -r 16000 -c 1 -b 16 " + AUDIO_FILENAME + " trim 0 " + to_string(RECORD_DURATION)).c_str());
 }
