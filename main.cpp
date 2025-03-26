@@ -6,23 +6,25 @@
 using namespace std;
 
 int main() {
-    // **创建线程，定期获取当前天气**
-    thread weatherThread([]() {
+    const string API_KEY = "fe43e68f9ac2ce5e9488824dea81a02c";
+    const string CITY = "Glasgow";
+    
+    Weather weather(API_KEY, CITY);
+
+    thread weatherThread([&weather]() {
         while (true) {
-            getCurrentWeather();
-            this_thread::sleep_for(chrono::minutes(30));  // 每 30 分钟更新一次
+            weather.getCurrentWeather();
+            this_thread::sleep_for(chrono::minutes(30));
         }
     });
 
-    // **创建线程，定期获取天气预报**
-    thread forecastThread([]() {
+    thread forecastThread([&weather]() {
         while (true) {
-            getWeatherForecast();
-            this_thread::sleep_for(chrono::hours(12));  // 每 12 小时更新一次
+            weather.getWeatherForecast();
+            this_thread::sleep_for(chrono::hours(12));
         }
     });
 
-    // **让主线程保持运行**
     weatherThread.detach();
     forecastThread.detach();
 
