@@ -1,0 +1,38 @@
+#ifndef SNAKE_GAME_H
+#define SNAKE_GAME_H
+
+#include "snake.h"
+#include "MAX7219.h"
+#include "thread"
+#include <atomic>
+
+class SnakeGame {
+public:
+    SnakeGame(int width, int height, MAX7219& disp);
+    ~SnakeGame();
+    // void run();
+    void start();
+    void setDirection(Direction d); // external set direction
+    void stop();
+
+private:
+    int width, height;
+    int fx, fy;
+    bool flash;
+    int frameCount;
+
+    Direction currentDirection; 
+    Snake snake;
+    MAX7219 display;
+    std::thread gameThread;
+
+    void run();
+    // void setNonBlockingRawInput();
+    void restoreInput();
+    void generateApple();
+    bool isOccupied(int x, int y) const;
+
+    std::atomic<bool> running = true; // game state
+};
+
+#endif

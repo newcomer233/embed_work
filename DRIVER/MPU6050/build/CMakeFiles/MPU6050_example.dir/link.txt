@@ -1,1 +1,0 @@
-aarch64-linux-gnu-g++ CMakeFiles/MPU6050_example.dir/MPU6050_example.cpp.o CMakeFiles/MPU6050_example.dir/MPU6050.cpp.o -o MPU6050_example 

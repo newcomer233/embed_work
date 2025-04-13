@@ -1,3 +1,0 @@
-/home/newcomer233/Desktop/embed_project/MPU6050/build/CMakeFiles/MPU6050_example.dir
-/home/newcomer233/Desktop/embed_project/MPU6050/build/CMakeFiles/edit_cache.dir
-/home/newcomer233/Desktop/embed_project/MPU6050/build/CMakeFiles/rebuild_cache.dir
