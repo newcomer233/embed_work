@@ -9,5 +9,9 @@ Even feeding it to an AI might get a "meh, too noob" response (tears).
 
 PPS: On second thought... maybe we should feed it to an AI—to help spot AI's bugs! Haha.
 
+2025_04_14_01:02
+
+I finally know why told us don't use GPT4..when translate PPS sentence to English "maybe we should feed it to an AI—to help spot bugs!"  emmmm, AI still know nothing about humans thinking.
+
 
 
