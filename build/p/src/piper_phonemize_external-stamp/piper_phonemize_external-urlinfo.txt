@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/bin/cmake;-P;/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/download-piper_phonemize_external.cmake;COMMAND;/usr/bin/cmake;-P;/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/verify-piper_phonemize_external.cmake;COMMAND;/usr/bin/cmake;-P;/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/extract-piper_phonemize_external.cmake
+source_dir=/home/lkj/piper/build/p/src/piper_phonemize_external
+work_dir=/home/lkj/piper/build/p/src
+url(s)=https://github.com/rhasspy/piper-phonemize/archive/refs/heads/master.zip
+hash=
+no_extract=
+

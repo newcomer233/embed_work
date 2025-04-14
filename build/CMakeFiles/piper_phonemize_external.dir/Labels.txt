@@ -1,0 +1,13 @@
+# Target labels
+ piper_phonemize_external
+# Source files and their labels
+/home/lkj/piper/build/CMakeFiles/piper_phonemize_external
+/home/lkj/piper/build/CMakeFiles/piper_phonemize_external.rule
+/home/lkj/piper/build/CMakeFiles/piper_phonemize_external-complete.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-build.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-configure.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-download.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-install.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-mkdir.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-patch.rule
+/home/lkj/piper/build/p/src/piper_phonemize_external-stamp/piper_phonemize_external-update.rule

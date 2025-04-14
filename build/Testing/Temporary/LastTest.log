@@ -1,0 +1,21 @@
+Start testing: Apr 14 07:52 CST
+----------------------------------------------------------
+1/1 Testing: test_piper
+1/1 Test: test_piper
+Command: "/home/lkj/piper/build/test_piper" "/home/lkj/piper/etc/test_voice.onnx" "/home/lkj/piper/build/pi/share/espeak-ng-data" "/home/lkj/piper/build/test.wav"
+Directory: /home/lkj/piper/build
+"test_piper" start time: Apr 14 07:52 CST
+Output:
+----------------------------------------------------------
+[2025-04-14 07:52:57.504] [info] Initialized piper
+[2025-04-14 07:52:57.634] [info] Terminated piper
+OK
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"test_piper" end time: Apr 14 07:52 CST
+"test_piper" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 14 07:52 CST
