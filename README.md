@@ -1,12 +1,13 @@
 # embed_work
 for UoG Team 27 embed work
 #
-这个项目和代码仓目前仅用于格拉斯哥大学 ENG5220: Real Time Embedded Programming (2024-25)课程的课设
-在该项目完成前，原则上，暂不考虑给予除UoG Team 27 以外人员的代码使用权力。
+This project and its source code are part of the coursework for ENG5220: Real-Time Embedded Programming (2024–25) at the University of Glasgow.
+Until the project is officially completed, in principle, the code is not available for use outside UoG Team 27.
 
-PS：话说我们这种底边学生真的会被人要代码吗
-    拿去喂AI都会被嫌弃菜的扣脚的程度吧（流泪）
+PS: Honestly, would anyone even want code from students like us at the bottom of the food chain?
+Even feeding it to an AI might get a "meh, too noob" response (tears).
 
-PPS：思索，我觉得可以拿去给AI挑BUG，哈哈
+PPS: On second thought... maybe we should feed it to an AI—to help spot AI's bugs! Haha.
+
 
 
