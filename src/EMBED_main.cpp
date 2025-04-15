@@ -9,9 +9,11 @@
 #include "SensorCtrl.h"
 #include "MPU6050Ctrl.h"
 #include "SpeechCtrl.h"
-
+#include "WeatherWrapper.h"
 
 enum class AppState { TIME, GAME };
+
+
 
 class MyGestureHandler : public GestureHandler {
 public:
@@ -65,8 +67,13 @@ private:
 
 class VoiceCommandHandler {
     public:
-        VoiceCommandHandler(SnakeGame& game, AppController& controller, AppState& state, std::atomic<bool>& exitFlag)
-            : speechCtrl("../model"), snake(game), controller(controller), appState(state), shouldExit(exitFlag) {
+        VoiceCommandHandler(SnakeGame& game, AppController& controller, AppState& state,
+                            const std::string& apiKey, const std::string& city)
+            : speechCtrl("../model"),
+              snake(game),
+              app(controller),
+              appState(state),
+              weather(apiKey, city) {
     
             // 贪吃蛇方向控制
             speechCtrl.setOnUp([this]() {
@@ -86,24 +93,30 @@ class VoiceCommandHandler {
                     snake.setDirection(Direction::RIGHT);
             });
     
-            // 通用语音指令回调
+            // 通用语音命令处理
             speechCtrl.setResultCallback([this](const std::string& text) {
                 std::string lower = toLower(text);
     
                 if (lower.find("switch") != std::string::npos || lower.find("mode") != std::string::npos) {
                     std::cout << "[Voice] 语音切换模式" << std::endl;
                     toggleMode();
-                } else if (lower.find("timer") != std::string::npos) {
+                } else if(appState == AppState::TIME){                
+                    if (lower.find("timer") != std::string::npos) {
                     std::cout << "[Voice] 语音进入计时器模式" << std::endl;
                     appState = AppState::TIME;
-                    controller.handleCommand("timer");
-                } else if (lower.find("weather") != std::string::npos) {
-                    std::cout << "[Voice] 语音进入天气模式" << std::endl;
-                    appState = AppState::TIME;
-                    controller.handleCommand("temp");
-                } else if (lower.find("exit") != std::string::npos || lower.find("quit") != std::string::npos) {
-                    std::cout << "[Voice] 语音请求退出" << std::endl;
-                    shouldExit = true;
+                    this->app.handleCommand("timer");
+                    this->app.handleCommand("0005");
+                    } else if (lower.find("weather") != std::string::npos || lower.find("check weather") != std::string::npos || lower.find("whether") != std::string::npos) {
+                        std::cout << "[Voice] 语音进入天气模式" << std::endl;
+                        appState = AppState::TIME;
+                        this->app.handleCommand("temp");
+                        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        
+                        weather.updateWeather();
+                        std::string weatherCmd = weather.getWeatherCommand();
+                        std::cout << "[Voice] 天气命令为: " << weatherCmd << std::endl;
+                        this->app.handleCommand(weatherCmd);
+                    }
                 }
             });
         }
@@ -119,19 +132,19 @@ class VoiceCommandHandler {
     private:
         SpeechCtrl speechCtrl;
         SnakeGame& snake;
-        AppController& controller;
+        AppController& app;
         AppState& appState;
-        std::atomic<bool>& shouldExit;
+        WeatherWrapper weather;
     
         void toggleMode() {
             if (appState == AppState::TIME) {
                 appState = AppState::GAME;
-                controller.shutdown();
+                app.shutdown();
                 snake.start();
             } else {
                 snake.stop();
                 appState = AppState::TIME;
-                controller.handleCommand("time");
+                app.handleCommand("time");
             }
         }
     
@@ -142,15 +155,19 @@ class VoiceCommandHandler {
         }
     };
     
+    
 
 
 int main() {
+    std::string API_KEY = "fe43e68f9ac2ce5e9488824dea81a02c";
+    std::string  CITY = "Glasgow";
+
     MAX7219 MAX7219;
-    AppController controller(MAX7219);
+    AppController app(MAX7219);
     SnakeGame snake(16, 8, MAX7219);
     AppState currentState = AppState::TIME;
 
-    controller.setTimerFinishedCallback([]() {
+    app.setTimerFinishedCallback([]() {
         std::cout << "[Main] timer stop!" << std::endl;
     });
 
@@ -160,7 +177,7 @@ int main() {
     gestureCtrl.setGestureHandler(&gestureHandler);
 
     MPU6050Ctrl mpuCtrl(13, "/dev/i2c-1", 0x68);
-    MyMPUHandler mpuHandler(controller, snake, currentState);
+    MyMPUHandler mpuHandler(app, snake, currentState);
     mpuCtrl.setCallback(&mpuHandler);
 
     if (!gestureCtrl.init()) {
@@ -173,7 +190,8 @@ int main() {
         return 1;
     }
 
-    VoiceCommandHandler voiceCtrl(snake, controller, currentState);
+ 
+    VoiceCommandHandler voiceCtrl(snake, app, currentState,API_KEY,CITY);
     voiceCtrl.start();
 
     std::cout << "[Main] initial done, time mode, waiting for INT and command..." << std::endl;
@@ -188,12 +206,16 @@ int main() {
             break;
         } else if (input == "state_game" && currentState != AppState::GAME) {
             currentState = AppState::GAME;
-            controller.handleCommand("game");
+            app.shutdown();
             snake.start();
         } else if (input == "state_time" && currentState != AppState::TIME) {
             snake.stop();
             currentState = AppState::TIME;
-            controller.handleCommand("time");
+            app.handleCommand("time");
+            if(input == "temp") {
+                app.handleCommand("temp");
+                app.handleCommand("s12");
+            }
         } else if (currentState == AppState::GAME) {
             if (input == "up") snake.setDirection(Direction::UP);
             else if (input == "down") snake.setDirection(Direction::DOWN);
@@ -203,6 +225,6 @@ int main() {
     }
 
     // clear speech recognizer
-    speechCtrl.stop();
+    voiceCtrl.stop();
     return 0;
 }
