@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/vosk_demo.dir/src/main.cpp.o -o bin/vosk_demo   -L/home/newcomer233/Desktop/vosk-runtime/lib  -Wl,-rpath,/home/newcomer233/Desktop/vosk-runtime/lib -lvosk 

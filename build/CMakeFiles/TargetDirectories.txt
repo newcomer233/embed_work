@@ -1,0 +1,3 @@
+/home/newcomer233/Desktop/vosk-runtime/build/CMakeFiles/vosk_demo.dir
+/home/newcomer233/Desktop/vosk-runtime/build/CMakeFiles/edit_cache.dir
+/home/newcomer233/Desktop/vosk-runtime/build/CMakeFiles/rebuild_cache.dir
