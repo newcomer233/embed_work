@@ -1,0 +1,89 @@
+Time, Weather and Snake Game Test Notes 
+Linfeng Zhang 3001977
+
+1.1 MAX7219 custom pattern display (2nd Feb 2025)
+Test: 
+Sent a heart pattern using C++ driver.
+Result: 
+Clear visual output on MAX7219 LED matrix.
+
+1.2 Division of work (12th Feb)
+My work: 
+MAX7219 control logic and pattern display implementation. Providing input interfaces for the Zehua Xu’s main module.
+
+1.3 Keyboard input for MAX7219 pattern switching (19th Feb)
+Test: 
+Pressed specific keyboard keys mapped to display numbers or weather icons via C++ input handling. Also tested setting a default brightness. 
+Result: 
+Correct corresponding pattern (number or icon) displayed clearly on the LED matrix upon key press. Default brightness was initially set to the maximum which is too harsh. Actually the lowest brightness is enough, so we simply set the default brightness to the lowest. 
+
+
+1.4 2-digit number pattern on a single MAX7219 matrix (26th Feb)
+Test: 
+Input 2-digit numbers (e.g., "12", "34") via keyboard. C++ code read the input and called driver functions to display the corresponding digits. 
+Result: 
+Successfully displayed one number on each half. Failed to display 2 numbers at the same time. 
+Analysis: 
+MAX7219 can only read input once. We should input the full 2-digit number pattern at one time instead of input 1-digit number twice. 
+
+1.5 Double MAX7219 matrices pattern display (5th Mar)
+Notes: 
+Original red LED matrices were replaced with white ones due to poor appearance. Manually soldered required output pins on the new modules as they lacked native ones, and cascaded two matrices in series.
+Test: 
+Used keyboard input to display corresponding patterns on both MAX7219 matrices via C++ driver.
+Result: 
+MAX7219 matrices successfully displayed simultaneously, confirming the cascade connection and data transmission is working. 
+
+(12th Mar’s Lab session was cancelled as Rankine Building was not available.)
+
+1.6 Displaying different patterns on cascaded MAX7219 matrices for 4-digit time format (19th Mar)
+Note: 
+While displaying arbitrary two-digit numbers on a single matrix was not yet fully implemented, synchronizing control across two matrices was prioritized. Therefore, we designed specific fixed patterns representing "12" and "34" to first test the cascaded control mechanism itself.
+Test: 
+Input '1234' via keyboard, attempting to display '12' on the first matrix and '34' on the second matrix simultaneously.
+Result: 
+Failed to display different patterns on the two matrices as intended. Only one matrix seemed to display data correctly at a time, or both displayed the same data. The expected separation ('12' on matrix 1, '34' on matrix 2) was not achieved.
+Analysis: 
+Suspected issue with the cascading logic in the C++ driver. 
+
+1.7 Division of further work (26th Mar)
+Note: 
+During the final lab session, we allocated the remaining tasks required for the project. 
+My work: 
+1. Finalize the implementation of MAX7219 control and numerical display. 
+2. Add displays for weather and temperature.
+3. Implement the countdown timer feature. 
+4. Implement the Snake game, as a demonstration of display performance and system responsiveness. 
+
+1.8 Arbitrary 2-digit display on each single matrix and different pattern displays on cascaded matrices for 4-digit time (1st Apr)
+Note: 
+Implemented logic to combine two 8x4 unit digit patterns into a single data structure before sending to the MAX7219, enabling arbitrary 2-digit display on one matrix. Corrected the previous issue causing cascaded display failure: the pattern data/index for "34" was incorrectly defined, preventing it from being displayed correctly. 
+Test: 
+Input arbitrary 4-digit numbers (e.g., '1234', '0530') via keyboard to be displayed across the two cascaded MAX7219 matrices. 
+Result: 
+Successfully displayed arbitrary 4-digit numbers in a time-like format across the two matrices (e.g., '12' appeared on the first matrix, '34' on the second). Both the arbitrary 2-digit display on a single matrix and the synchronized display of different patterns across two cascaded matrices are now functional.
+
+1.9 Weather and temperature display (2nd Apr)
+Test: Input letter + two digits via keyboard (e.g., 's25' for sun, 25 degrees) to display the corresponding weather icon on the first matrix and the temperature on the second matrix.
+Result: Successfully displayed the corresponding icon and two-digit number across the matrices. However, handling for single-digit temperature input (e.g., 'r7') and negative temperature input (e.g., 's-5') needs to be implemented.
+
+1.10 Timer function and multi-mode switching (3nd Apr)
+Test: 
+Mode switching ('time', 'temp', 'timer') and timer initiation with numeric input via keyboard.
+Result: 
+Mode switching successful. Timer countdown works, but the program hangs upon timer completion. Needs adjustment.
+
+1.11 Snake game: Snake generation and movement (4th Apr)
+Test: 
+Display snake body, continuous movement and boundary wrapping logic. Tested basic responsiveness of direction changes to keyboard arrow inputs. 
+Result: 
+Snake and straight movement display correctly. Have some issues with direction turning and keyboard mapping. 
+
+1.12 Snake eating, growing and collision (5th Apr)
+Test: Food generation logic, snake eating, self-collision detection.
+Result: Fail to eat initially and food may generate on the snake body as the eats function wasn't correctly detecting snake's head colliding with food pixel. Fixed by adjusting the eating function and generation logic. 
+
+1.13 Gameplay, visual effect and final polish (6th Apr)
+Test: Game end detection and visual effect refining. Assessed overall playability. 
+Result: Game correctly ends when collision happens. Ideal visual effects. Keyboard input feels laggy initially due to poor input handling. Fixed by replacing the handling logic with a non-blocking approach. 
+
