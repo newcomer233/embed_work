@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/snake.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v0.1/src/snake.cpp \
+ /home/newcomer233/Desktop/embed_final_v09/src/snake.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/snake.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/snake.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \

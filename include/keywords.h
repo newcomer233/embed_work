@@ -9,10 +9,14 @@ inline const std::unordered_map<std::string, std::string> keywordMap = {
     {"left", "LEFT"},
     {"right", "RIGHT"},
     {"mode", "MODE"},
-    // some other name we can add in here to easy manager
+    // 你可以在这里扩展更多别名：
     {"上", "UP"},
     {"下", "DOWN"},
     {"左", "LEFT"},
     {"右", "RIGHT"},
-    {"模式", "MODE"}
+    {"模式", "MODE"},
+    // some word we test to matching the test
+    {"oh","DOWN"},
+    {"tom", "DOWN"},
+    {"ha", "DOWN"}
 };

@@ -66,3 +66,6 @@ void SpeechCtrl::setOnDown(std::function<void()> cb) { onDown = cb; }
 void SpeechCtrl::setOnLeft(std::function<void()> cb) { onLeft = cb; }
 void SpeechCtrl::setOnRight(std::function<void()> cb) { onRight = cb; }
 void SpeechCtrl::setOnModeSwitch(std::function<void()> cb) { onModeSwitch = cb; }
+void SpeechCtrl::setResultCallback(std::function<void(const std::string&)> cb) {
+    onRawText = cb;
+}

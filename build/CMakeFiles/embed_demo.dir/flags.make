@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/newcomer233/Desktop/embed_final_v0.1/include
+CXX_INCLUDES = -I/home/newcomer233/Desktop/embed_final_v09/include -I/home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include -I/home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include -I/home/newcomer233/Desktop/embed_final_v09/lib/si/include
 
 CXX_FLAGS = -std=gnu++17
 

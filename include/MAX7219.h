@@ -34,9 +34,9 @@ private:
     uint8_t devicePatterns[2][8];
     void sendData(int device, uint8_t reg, uint8_t value);
 
-    //for snake game
+    //for snake game6
     int numDevices;
-    uint8_t buffer[8][2]; 
+    uint8_t buffer[8][2]; // 每个 device 一列（最多16列）
     void sendAll(uint8_t reg, uint8_t data);
 
 };

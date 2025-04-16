@@ -11,12 +11,12 @@ MPU6050Ctrl::~MPU6050Ctrl() {
 
 bool MPU6050Ctrl::init() {
     if (!sensor_.init()) {
-        std::cerr << "[MPU6050Ctrl] initial fail\n";
+        std::cerr << "[MPU6050Ctrl] 传感器初始化失败\n";
         return false;
     }
 
-    sensor_.registerCallback(this);  // register as a callback
-    std::cout << "[MPU6050Ctrl] successful register as a int monitor callback\n";
+    sensor_.registerCallback(this);  // 注册中断回调
+    std::cout << "[MPU6050Ctrl] 成功注册为底层中断监听者\n";
     return true;
 }
 
@@ -30,6 +30,6 @@ void MPU6050Ctrl::setCallback(MPU6050DataCallback* cb) {
 
 void MPU6050Ctrl::onDataReady(const MPU6050_Data& d) {
     if (callback_) {
-        callback_->onMPU6050Data(d); 
+        callback_->onMPU6050Data(d);  // 转发给外部用户注册的回调
     }
 }

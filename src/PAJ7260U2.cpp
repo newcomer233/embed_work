@@ -21,12 +21,12 @@ Paj7260U2::~Paj7260U2() {
 bool Paj7260U2::init() {
     i2c_fd_ = open(i2c_dev_, O_RDWR);
     if (i2c_fd_ < 0 || ioctl(i2c_fd_, I2C_SLAVE, addr_) < 0) {
-        std::cerr << "I2C Initial fail\n";
+        std::cerr << "I2C 初始化失败\n";
         return false;
     }
 
     if (!deviceInit()) {
-        std::cerr << "PAJ7260U2 initial fail\n";
+        std::cerr << "PAJ7260U2 设备初始化失败\n";
         return false;
     }
 
@@ -136,7 +136,7 @@ bool Paj7260U2::getLastGesture(Paj7260Data& out) {
 }
 
 void Paj7260U2::irqLoop() {
-    std::cout << "[IRQ] interrupt thread on ,monitor GPIO" << gpio_line_ << std::endl;
+    std::cout << "[IRQ] 中断线程已启动，监听 GPIO" << gpio_line_ << std::endl;
 
     while (running_) {
         const timespec ts = { 5, 0 };
@@ -146,7 +146,7 @@ void Paj7260U2::irqLoop() {
             if (gpiod_line_event_read(line_, &ev) == 0 &&
                 ev.event_type == GPIOD_LINE_EVENT_FALLING_EDGE) {
 
-                std::cout << "[IRQ] falling edge detect\n";
+                std::cout << "[IRQ] 检测到下降沿中断\n";
 
                 Paj7260Data d;
                 if (readGesture(d)) {
@@ -165,7 +165,7 @@ void Paj7260U2::irqLoop() {
                         cb->onGestureDetected(d);
                     }
                 } else {
-                    std::cout << "[IRQ] fail to read, int register may not clear\n";
+                    std::cout << "[IRQ] 读取失败，可能中断未正确清除\n";
                 }
             }
         }

@@ -1,0 +1,11 @@
+prefix=/home/newcomer233/Desktop/piper-master/build/fi
+exec_prefix=/home/newcomer233/Desktop/piper-master/build/fi
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 10.0.0
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

@@ -10,6 +10,7 @@
 #include "MPU6050Ctrl.h"
 #include "SpeechCtrl.h"
 #include "WeatherWrapper.h"
+#include "PiperSynthesizer.h"
 
 enum class AppState { TIME, GAME };
 
@@ -42,8 +43,8 @@ private:
 
 class MyMPUHandler : public MPU6050DataCallback {
 public:
-    MyMPUHandler(AppController& controller, SnakeGame& game, AppState& state)
-        : app(controller), snake(game), appState(state) {}
+    MyMPUHandler(AppController& controller, SnakeGame& game, AppState& state, PiperSynthesizer& synth)
+        : app(controller), snake(game), appState(state), synth(synth){}
 
     void onMPU6050Data(const MPU6050_Data& d) override {
         std::cout << "[MPU INT] 切换模式" << std::endl;
@@ -52,10 +53,14 @@ public:
             appState = AppState::GAME;
             app.shutdown(); 
             snake.start();
+            this->synth.synthesizeTextToFile("game mode", "/home/newcomer233/output.wav");
+            this->synth.playAudioFile("/home/newcomer233/output.wav");
         } else {
             snake.stop();
             appState = AppState::TIME;
             app.handleCommand("time");
+            this->synth.synthesizeTextToFile("time mode", "/home/newcomer233/output.wav");
+            this->synth.playAudioFile("/home/newcomer233/output.wav");
         }
     }
 
@@ -63,17 +68,20 @@ private:
     AppController& app;
     SnakeGame& snake;
     AppState& appState;
+    PiperSynthesizer& synth;
 };
 
 class VoiceCommandHandler {
     public:
-        VoiceCommandHandler(SnakeGame& game, AppController& controller, AppState& state,
+        VoiceCommandHandler(SnakeGame& game, AppController& controller, AppState& state,PiperSynthesizer& synth,
                             const std::string& apiKey, const std::string& city)
             : speechCtrl("../model"),
               snake(game),
               app(controller),
               appState(state),
-              weather(apiKey, city) {
+              weather(apiKey, city),
+              synth (synth)
+              {
     
             // 贪吃蛇方向控制
             speechCtrl.setOnUp([this]() {
@@ -135,16 +143,21 @@ class VoiceCommandHandler {
         AppController& app;
         AppState& appState;
         WeatherWrapper weather;
-    
+        PiperSynthesizer& synth;
+
         void toggleMode() {
             if (appState == AppState::TIME) {
                 appState = AppState::GAME;
+                this->synth.synthesizeTextToFile("game mode", "/home/newcomer233/output.wav");
+                this->synth.playAudioFile("/home/newcomer233/output.wav");
                 app.shutdown();
                 snake.start();
             } else {
                 snake.stop();
                 appState = AppState::TIME;
                 app.handleCommand("time");
+                this->synth.synthesizeTextToFile("time mode", "/home/newcomer233/output.wav");
+                this->synth.playAudioFile("/home/newcomer233/output.wav");
             }
         }
     
@@ -159,6 +172,11 @@ class VoiceCommandHandler {
 
 
 int main() {
+    std::string modelPath = "/home/newcomer233/Desktop/piper-master/piper_models/en_US-amy-medium.onnx";
+    std::string configPath = modelPath + ".json";
+    std::string espeakPath = "/usr/lib/aarch64-linux-gnu/espeak-ng-data";
+    std::string outputPath = "/home/newcomer233/output.wav";
+
     std::string API_KEY = "fe43e68f9ac2ce5e9488824dea81a02c";
     std::string  CITY = "Glasgow";
 
@@ -166,6 +184,7 @@ int main() {
     AppController app(MAX7219);
     SnakeGame snake(16, 8, MAX7219);
     AppState currentState = AppState::TIME;
+    PiperSynthesizer synth(modelPath, configPath, espeakPath);
 
     app.setTimerFinishedCallback([]() {
         std::cout << "[Main] timer stop!" << std::endl;
@@ -177,7 +196,7 @@ int main() {
     gestureCtrl.setGestureHandler(&gestureHandler);
 
     MPU6050Ctrl mpuCtrl(13, "/dev/i2c-1", 0x68);
-    MyMPUHandler mpuHandler(app, snake, currentState);
+    MyMPUHandler mpuHandler(app, snake, currentState,synth);
     mpuCtrl.setCallback(&mpuHandler);
 
     if (!gestureCtrl.init()) {
@@ -191,7 +210,7 @@ int main() {
     }
 
  
-    VoiceCommandHandler voiceCtrl(snake, app, currentState,API_KEY,CITY);
+    VoiceCommandHandler voiceCtrl(snake, app, currentState,synth,API_KEY,CITY);
     voiceCtrl.start();
 
     std::cout << "[Main] initial done, time mode, waiting for INT and command..." << std::endl;

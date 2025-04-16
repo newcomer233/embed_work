@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/newcomer233/Desktop/embed_final_v0.1
+CMAKE_SOURCE_DIR = /home/newcomer233/Desktop/embed_final_v09
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/newcomer233/Desktop/embed_final_v0.1/build
+CMAKE_BINARY_DIR = /home/newcomer233/Desktop/embed_final_v09/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v0.1/build/CMakeFiles /home/newcomer233/Desktop/embed_final_v0.1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles /home/newcomer233/Desktop/embed_final_v09/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v0.1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -273,29 +273,53 @@ src/PAJ7260U2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.s
 .PHONY : src/PAJ7260U2.cpp.s
 
-src/SensorCtr.o: src/SensorCtr.cpp.o
-.PHONY : src/SensorCtr.o
+src/PiperSynthesizer.o: src/PiperSynthesizer.cpp.o
+.PHONY : src/PiperSynthesizer.o
 
 # target to build an object file
-src/SensorCtr.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtr.cpp.o
-.PHONY : src/SensorCtr.cpp.o
+src/PiperSynthesizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o
+.PHONY : src/PiperSynthesizer.cpp.o
 
-src/SensorCtr.i: src/SensorCtr.cpp.i
-.PHONY : src/SensorCtr.i
+src/PiperSynthesizer.i: src/PiperSynthesizer.cpp.i
+.PHONY : src/PiperSynthesizer.i
 
 # target to preprocess a source file
-src/SensorCtr.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtr.cpp.i
-.PHONY : src/SensorCtr.cpp.i
+src/PiperSynthesizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.i
+.PHONY : src/PiperSynthesizer.cpp.i
 
-src/SensorCtr.s: src/SensorCtr.cpp.s
-.PHONY : src/SensorCtr.s
+src/PiperSynthesizer.s: src/PiperSynthesizer.cpp.s
+.PHONY : src/PiperSynthesizer.s
 
 # target to generate assembly for a file
-src/SensorCtr.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtr.cpp.s
-.PHONY : src/SensorCtr.cpp.s
+src/PiperSynthesizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.s
+.PHONY : src/PiperSynthesizer.cpp.s
+
+src/SensorCtrl.o: src/SensorCtrl.cpp.o
+.PHONY : src/SensorCtrl.o
+
+# target to build an object file
+src/SensorCtrl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o
+.PHONY : src/SensorCtrl.cpp.o
+
+src/SensorCtrl.i: src/SensorCtrl.cpp.i
+.PHONY : src/SensorCtrl.i
+
+# target to preprocess a source file
+src/SensorCtrl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.i
+.PHONY : src/SensorCtrl.cpp.i
+
+src/SensorCtrl.s: src/SensorCtrl.cpp.s
+.PHONY : src/SensorCtrl.s
+
+# target to generate assembly for a file
+src/SensorCtrl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.s
+.PHONY : src/SensorCtrl.cpp.s
 
 src/SpeechCtrl.o: src/SpeechCtrl.cpp.o
 .PHONY : src/SpeechCtrl.o
@@ -345,6 +369,30 @@ src/SpeechRecognizer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.s
 .PHONY : src/SpeechRecognizer.cpp.s
 
+src/WeatherWrapper.o: src/WeatherWrapper.cpp.o
+.PHONY : src/WeatherWrapper.o
+
+# target to build an object file
+src/WeatherWrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o
+.PHONY : src/WeatherWrapper.cpp.o
+
+src/WeatherWrapper.i: src/WeatherWrapper.cpp.i
+.PHONY : src/WeatherWrapper.i
+
+# target to preprocess a source file
+src/WeatherWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.i
+.PHONY : src/WeatherWrapper.cpp.i
+
+src/WeatherWrapper.s: src/WeatherWrapper.cpp.s
+.PHONY : src/WeatherWrapper.s
+
+# target to generate assembly for a file
+src/WeatherWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.s
+.PHONY : src/WeatherWrapper.cpp.s
+
 src/app_controller.o: src/app_controller.cpp.o
 .PHONY : src/app_controller.o
 
@@ -368,6 +416,30 @@ src/app_controller.s: src/app_controller.cpp.s
 src/app_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/app_controller.cpp.s
 .PHONY : src/app_controller.cpp.s
+
+src/piper.o: src/piper.cpp.o
+.PHONY : src/piper.o
+
+# target to build an object file
+src/piper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/piper.cpp.o
+.PHONY : src/piper.cpp.o
+
+src/piper.i: src/piper.cpp.i
+.PHONY : src/piper.i
+
+# target to preprocess a source file
+src/piper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/piper.cpp.i
+.PHONY : src/piper.cpp.i
+
+src/piper.s: src/piper.cpp.s
+.PHONY : src/piper.s
+
+# target to generate assembly for a file
+src/piper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/piper.cpp.s
+.PHONY : src/piper.cpp.s
 
 src/snake.o: src/snake.cpp.o
 .PHONY : src/snake.o
@@ -417,6 +489,30 @@ src/snake_game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/snake_game.cpp.s
 .PHONY : src/snake_game.cpp.s
 
+src/weather.o: src/weather.cpp.o
+.PHONY : src/weather.o
+
+# target to build an object file
+src/weather.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/weather.cpp.o
+.PHONY : src/weather.cpp.o
+
+src/weather.i: src/weather.cpp.i
+.PHONY : src/weather.i
+
+# target to preprocess a source file
+src/weather.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/weather.cpp.i
+.PHONY : src/weather.cpp.i
+
+src/weather.s: src/weather.cpp.s
+.PHONY : src/weather.s
+
+# target to generate assembly for a file
+src/weather.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/weather.cpp.s
+.PHONY : src/weather.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -444,24 +540,36 @@ help:
 	@echo "... src/PAJ7260U2.o"
 	@echo "... src/PAJ7260U2.i"
 	@echo "... src/PAJ7260U2.s"
-	@echo "... src/SensorCtr.o"
-	@echo "... src/SensorCtr.i"
-	@echo "... src/SensorCtr.s"
+	@echo "... src/PiperSynthesizer.o"
+	@echo "... src/PiperSynthesizer.i"
+	@echo "... src/PiperSynthesizer.s"
+	@echo "... src/SensorCtrl.o"
+	@echo "... src/SensorCtrl.i"
+	@echo "... src/SensorCtrl.s"
 	@echo "... src/SpeechCtrl.o"
 	@echo "... src/SpeechCtrl.i"
 	@echo "... src/SpeechCtrl.s"
 	@echo "... src/SpeechRecognizer.o"
 	@echo "... src/SpeechRecognizer.i"
 	@echo "... src/SpeechRecognizer.s"
+	@echo "... src/WeatherWrapper.o"
+	@echo "... src/WeatherWrapper.i"
+	@echo "... src/WeatherWrapper.s"
 	@echo "... src/app_controller.o"
 	@echo "... src/app_controller.i"
 	@echo "... src/app_controller.s"
+	@echo "... src/piper.o"
+	@echo "... src/piper.i"
+	@echo "... src/piper.s"
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"
 	@echo "... src/snake_game.o"
 	@echo "... src/snake_game.i"
 	@echo "... src/snake_game.s"
+	@echo "... src/weather.o"
+	@echo "... src/weather.i"
+	@echo "... src/weather.s"
 .PHONY : help
 
 

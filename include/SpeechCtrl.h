@@ -20,6 +20,7 @@ public:
     void setOnModeSwitch(std::function<void()> cb);
 
     void setResultCallback(std::function<void(const std::string&)> cb);
+    
 private:
     void listenLoop();
 

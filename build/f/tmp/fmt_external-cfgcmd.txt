@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX:PATH=/home/newcomer233/Desktop/embed_final_v09/build/fi;-DFMT_TEST:BOOL=OFF;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

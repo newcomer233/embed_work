@@ -26,7 +26,7 @@ SnakeGame::SnakeGame(int width, int height, MAX7219& disp)
       display(disp) {}
 
 SnakeGame::~SnakeGame() {
-    stop(); // quit and clear thread
+    stop(); // 保证析构时不会留下线程
 }
 
 // void SnakeGame::setNonBlockingRawInput() {

@@ -31,20 +31,20 @@ void SpeechRecognizer::stop() {
 void SpeechRecognizer::recognizeLoop() {
     VoskModel* model = vosk_model_new(modelPath.c_str());
     if (!model) {
-        std::cerr << "Failed to load model from " << modelPath << std::endl;
+        std::cerr << "❌ Failed to load model from " << modelPath << std::endl;
         return;
     }
 
     VoskRecognizer* recognizer = vosk_recognizer_new(model, sampleRate);
     if (!recognizer) {
-        std::cerr << "Failed to create recognizer" << std::endl;
+        std::cerr << "❌ Failed to create recognizer" << std::endl;
         vosk_model_free(model);
         return;
     }
 
     FILE* pipe = popen("arecord -q -f S16_LE -r 16000 -c 1", "r");
     if (!pipe) {
-        std::cerr << "Failed to open arecord pipe" << std::endl;
+        std::cerr << "❌ Failed to open arecord pipe" << std::endl;
         vosk_recognizer_free(recognizer);
         vosk_model_free(model);
         return;
@@ -58,7 +58,8 @@ void SpeechRecognizer::recognizeLoop() {
                 const char* result = vosk_recognizer_result(recognizer);
                 if (callback) callback(result);
             } else {
-                //later may some additional process
+                // const char* partial = vosk_recognizer_partial_result(recognizer);
+                // 可选：处理 partial 识别
             }
         }
     }

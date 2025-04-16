@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/app_controller.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v0.1/src/app_controller.cpp \
+ /home/newcomer233/Desktop/embed_final_v09/src/app_controller.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/app_controller.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/app_controller.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -157,9 +157,9 @@ CMakeFiles/embed_demo.dir/src/app_controller.cpp.o: \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/uniform_int_dist.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/MAX7219.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/patterns.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/patterns.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/MAX7219.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/patterns.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/patterns.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/exception \
  /usr/include/c++/12/bits/exception_ptr.h \

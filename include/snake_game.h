@@ -12,8 +12,8 @@ public:
     ~SnakeGame();
     // void run();
     void start();
-    void setDirection(Direction d); // external set direction
-    void stop();
+    void setDirection(Direction d); // 外部方向接口
+    void stop(); // 停止游戏
 
 private:
     int width, height;
@@ -21,7 +21,7 @@ private:
     bool flash;
     int frameCount;
 
-    Direction currentDirection; 
+    Direction currentDirection; // 当前方向
     Snake snake;
     MAX7219 display;
     std::thread gameThread;
@@ -32,7 +32,7 @@ private:
     void generateApple();
     bool isOccupied(int x, int y) const;
 
-    std::atomic<bool> running = true; // game state
+    std::atomic<bool> running = true; // 游戏运行状态
 };
 
 #endif

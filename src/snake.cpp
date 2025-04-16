@@ -4,9 +4,9 @@
 Snake::Snake(int width, int height) : width(width), height(height), dir(RIGHT), growFlag(false) {
     int y = height / 2;
     int x = width / 2;
-    body.emplace_back(y, x);       // head
+    body.emplace_back(y, x);       // 蛇头（最前）
     body.emplace_back(y, x - 1);
-    body.emplace_back(y, x - 2);   // tail
+    body.emplace_back(y, x - 2);   // 蛇尾
 }
 void Snake::move() {
     auto head = body.front();
@@ -22,18 +22,19 @@ void Snake::move() {
     if (head.second < 0) head.second = width - 1;
     if (head.second >= width) head.second = 0;
 
-    body.insert(body.begin(), head); // new head
+    body.insert(body.begin(), head); // 新头
     if (!growFlag)
-        body.pop_back();             
+        body.pop_back();             // 默认缩尾
     else
-        growFlag = false;            
+        growFlag = false;            // 只保留一次
+}
 
 void Snake::grow() {
     growFlag = true;
 }
 
 void Snake::setDirection(Direction d) {
-    // avoid reverse direction
+    // 防止反向移动
     if ((dir == UP && d != DOWN) || (dir == DOWN && d != UP) ||
         (dir == LEFT && d != RIGHT) || (dir == RIGHT && d != LEFT)) {
         dir = d;

@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v0.1/src/MPU6050.cpp \
+ /home/newcomer233/Desktop/embed_final_v09/src/MPU6050.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v0.1/include/MPU6050.h \
+ /home/newcomer233/Desktop/embed_final_v09/include/MPU6050.h \
  /usr/include/c++/12/cstdint \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \

@@ -58,18 +58,18 @@ bool MPU6050::init() {
 
 bool MPU6050::deviceInit() {
     uint8_t cmds[][2] = {
-        {REG_PWR_MGMT_1, 0x00},       // wake up MPU6050
-        {REG_INT_ENABLE, 0x40},       //  Motion INT（bit 6）
-        {REG_INT_PIN_CFG, 0xB0},      // LOW_N ACTIVE, PUSH PULL,
-        {REG_MOT_THR, 10},            // Motion Threshold
-        {REG_MOT_DUR, 10},            // Motion Duration
-        {REG_MOT_DETECT_CTRL, 0x15},  // LPF
-        {REG_ACCEL_CONFIG, 0x20},     // HPF
+        {REG_PWR_MGMT_1, 0x00},       // 唤醒
+        {REG_INT_ENABLE, 0x40},       // 启用 Motion 中断（bit 6）
+        {REG_INT_PIN_CFG, 0xB0},      // 中断引脚配置：低电平有效，推挽输出
+        {REG_MOT_THR, 10},            // Motion Threshold（可调）
+        {REG_MOT_DUR, 10},            // Motion Duration（可调）
+        {REG_MOT_DETECT_CTRL, 0x15},  // 加速器 LPF，运动检测控制
+        {REG_ACCEL_CONFIG, 0x20},     // 设置高通滤波器用于运动检测
     };
 
     for (auto& cmd : cmds) {
         if (write(i2c_fd_, cmd, 2) != 2) {
-            std::cerr << "initialization fail: 0x" << std::hex << (int)cmd[0] << std::endl;
+            std::cerr << "初始化失败: 0x" << std::hex << (int)cmd[0] << std::endl;
             return false;
         }
         usleep(1000);
@@ -77,11 +77,11 @@ bool MPU6050::deviceInit() {
 
     uint8_t reg = 0x3A;
     if (write(i2c_fd_, &reg, 1) != 1) {
-        std::cerr << "fail to write 0x3A \n";
+        std::cerr << "写入寄存器地址 0x3A 失败\n";
     } else {
         uint8_t tmp;
         if (read(i2c_fd_, &tmp, 1) != 1) {
-            std::cerr << "fail to write read 0x3A \n";
+            std::cerr << "读取 0x3A 寄存器失败\n";
         } else {
             std::cout << "INT_STATUS: 0x" << std::hex << (int)tmp << std::endl;
         }
@@ -150,7 +150,7 @@ bool MPU6050::getData(MPU6050_Data& out) {
 //     }
 // }
 void MPU6050::irqLoop() {
-    std::cout << "[IRQ] INT ON, monitor  GPIO" << gpio_line_ << std::endl;
+    std::cout << "[IRQ] 中断线程已启动，监听 GPIO" << gpio_line_ << std::endl;
 
     while (running_) {
         const timespec ts = { 5, 0 };
@@ -160,15 +160,15 @@ void MPU6050::irqLoop() {
             if (gpiod_line_event_read(line_, &ev) == 0 &&
                 ev.event_type == GPIOD_LINE_EVENT_FALLING_EDGE) {
 
-                std::cout << "[IRQ] falling edge detect\n";
+                std::cout << "[IRQ] 检测到下降沿中断\n";
 
                 uint8_t reg = 0x3A;
                 if (write(i2c_fd_, &reg, 1) != 1) {
-                    std::cerr << "fail to write 0x3A \n";
+                    std::cerr << "写入寄存器地址 0x3A 失败\n";
                 } else {
                     uint8_t tmp;
                     if (read(i2c_fd_, &tmp, 1) != 1) {
-                        std::cerr << "fail to read 0x3A \n";
+                        std::cerr << "读取 0x3A 寄存器失败\n";
                     } else {
                         std::cout << "INT_STATUS: 0x" << std::hex << (int)tmp << std::endl;
                     }
@@ -179,7 +179,7 @@ void MPU6050::irqLoop() {
                     std::lock_guard<std::mutex> lock(cb_mutex_);
                     for (auto &cb : callbacks_) cb->onDataReady(d);
                 }else {
-                    std::cout << "[IRQ] read fail, INT register may not clear\n";
+                    std::cout << "[IRQ] 读取失败，可能中断未正确清除\n";
                 }
             }
         }

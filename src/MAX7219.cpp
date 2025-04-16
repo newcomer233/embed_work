@@ -13,7 +13,7 @@
 MAX7219::MAX7219() {
     spi_fd = open(SPI_DEVICE, O_RDWR);
     if (spi_fd < 0) {
-        std::cerr << "can't open spi device: " << SPI_DEVICE << std::endl;
+        std::cerr << "无法打开 SPI 设备: " << SPI_DEVICE << std::endl;
         exit(1);
     }
 
@@ -116,7 +116,6 @@ void MAX7219::displayTime(int hour, int minute) {
 void MAX7219::displayTemperature(int temp, int device) {
     if (temp >= 0 && temp <= 9) {
         // 个位数：右移数字 + 加摄氏度
-        // part1: right shift 1 bit to remove the last column add the Celsius pattern
         for (int i = 0; i < 8; ++i) {
             uint8_t digit = Patterns::digitPatterns[temp][i] >> 4;     // 取左4列
             digit >>= 1;                                               // 再右移一位
@@ -166,12 +165,12 @@ void MAX7219::displayTimeWithColon(int hour, int minute, bool colonVisible) {
         uint8_t hourRight = Patterns::digitPatterns[hourUnits][i] >> 4;
         hourMerged[i] = (hourLeft << 4) | hourRight;
 
-        // minte part, shift left to remove the last column
+        // 分钟部分，左移一位去掉末尾列
         uint8_t minuteLeft = Patterns::digitPatterns[minuteTens][i] >> 4;
         uint8_t minuteRight = Patterns::digitPatterns[minuteUnits][i] >> 4;
         minuteMerged[i] = ((minuteLeft << 4) | minuteRight) >> 1;
 
-        // Set colon visibility based on the colonVisible flag
+        // 根据冒号可见性设置冒号
         if (colonVisible) {
             if (i == 4) hourMerged[i] |= 0b00000001;   // 小时模块冒号上点
             if (i == 3) minuteMerged[i] |= 0b10000000; // 分钟模块冒号下点
@@ -223,9 +222,9 @@ void MAX7219::refresh() {
     for (int row = 0; row < 8; ++row) {
         uint8_t tx[4];
         tx[0] = row + 1;
-        tx[1] = devicePatterns[1][row];  // right device (display left)
+        tx[1] = devicePatterns[1][row];  // 右边设备（显示左边）
         tx[2] = row + 1;
-        tx[3] = devicePatterns[0][row];  // left device (display right)
+        tx[3] = devicePatterns[0][row];  // 左边设备（显示右边）
         write(spi_fd, tx, 4);
     }
 }

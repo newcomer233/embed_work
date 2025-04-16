@@ -35,7 +35,7 @@ public:
 private:
     void irqLoop();
     bool readRawData(MPU6050_Data& out);
-    bool deviceInit(); 
+    bool deviceInit(); // 添加初始化函数声明
  
     int gpio_line_;
     const char* i2c_dev_;

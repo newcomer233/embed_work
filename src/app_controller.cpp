@@ -19,11 +19,11 @@ AppController::AppController(MAX7219& display)
       awaitingTimerInput(false),
       max7219(display)
 {
-    startTimeMode(); // start in time mode
+    startTimeMode(); // 默认启动时间模式
 }
 
 void AppController::handleCommand(const std::string& input) {
-    // count the setting time
+    // 计时器输入状态处理
     if (awaitingTimerInput) {
         if (input == "quit") {
             shutdown();
@@ -34,7 +34,7 @@ void AppController::handleCommand(const std::string& input) {
         } else if (input == "temp") {
             awaitingTimerInput = false;
             waitingWeatherInput = true;
-            std::cout << "weather mode ,please typing like s12 / r-5\n";
+            std::cout << "进入天气模式，输入如 s12 / r-5\n";
         } else if (input.size() == 4 && isdigit(input[0]) && isdigit(input[1]) &&
                    isdigit(input[2]) && isdigit(input[3])) {
             int minutes = std::stoi(input.substr(0, 2));
@@ -42,15 +42,15 @@ void AppController::handleCommand(const std::string& input) {
             int totalSeconds = minutes * 60 + seconds;
 
             if (totalSeconds <= 0) {
-                std::cout << "time must bigger than 0\n";
+                std::cout << "时间必须大于 0\n";
                 return;
             }
 
             awaitingTimerInput = false;
             startTimerCountdown(totalSeconds);
-            std::cout << "timer is on, typing p to pause or continue。\n";
+            std::cout << "计时器已启动，输入 p 可暂停或继续。\n";
         } else {
-            std::cout << "error type , should be (MMSS)\n";
+            std::cout << "格式错误，应为 4 位数字（MMSS）\n";
         }
         return;
     }
@@ -63,17 +63,17 @@ void AppController::handleCommand(const std::string& input) {
         max7219.displayTime(0, 0);
         awaitingTimerInput = true;
         mode = "timer";
-        std::cout << "please input 4 bits number(MMSS),  0230 means 02min 30s: ";
+        std::cout << "请输入 4 位倒计时时间（MMSS，如 0230 表示2分30秒）: ";
     } else if (input == "p" && mode == "timer") {
         if (timerActive.load()) {
             timerPaused = !timerPaused;
-            std::cout << (timerPaused ? "pause\n" : "continue\n");
+            std::cout << (timerPaused ? "已暂停\n" : "继续计时\n");
         } else {
-            std::cout << "timer is not work\n";
+            std::cout << "计时器未在运行中\n";
         }
     } else if (input == "temp") {
         waitingWeatherInput = true;
-        std::cout << "input weather and temperature ( s12 / r-5)...\n";
+        std::cout << "请输入天气和温度（如 s12 / r-5）...\n";
     } else if (mode == "temp" || waitingWeatherInput) {
         processTempInput(input);
     }
@@ -103,7 +103,7 @@ void AppController::startTimeMode() {
         }
     });
 
-    std::cout << "switch to time mode\n";
+    std::cout << "切换为时间模式\n";
 }
 
 void AppController::setTimerFinishedCallback(const std::function<void()>& callback) {
@@ -126,7 +126,7 @@ void AppController::startTimerCountdown(int totalSeconds) {
                 max7219.displayTime(min, sec);
 
                 if (secondsLeft == 0) {
-                    std::cout << "timer finish!" << std::endl;
+                    std::cout << "计时结束！" << std::endl;
                     if (onTimerFinished) onTimerFinished();
                 }
 
@@ -149,7 +149,7 @@ void AppController::startTimerCountdown(int totalSeconds) {
                 timerFinished = false;
                 max7219.displayTime(0, 0);
                 awaitingTimerInput = true;
-                std::cout << "please input 4 bits number(MMSS),  0230 means 02min 30s:  ";
+                std::cout << "请输入 4 位倒计时时间（MMSS，如 0230 表示2分30秒）: ";
             });
         }
 
@@ -159,7 +159,7 @@ void AppController::startTimerCountdown(int totalSeconds) {
 
 void AppController::processTempInput(const std::string& input) {
     if (input.size() < 2 || !isalpha(input[0])) {
-        std::cout << "error type , should be s12 / r-5\n";
+        std::cout << "格式错误，请输入如 s12 / r-5\n";
         return;
     }
 
@@ -191,11 +191,11 @@ void AppController::processTempInput(const std::string& input) {
             max7219.displayPattern(0, Patterns::G_Home);
             max7219.displayTemperature(temp, 1);
         } else {
-            std::cout << "unknown weather code\n";
+            std::cout << "未知天气代码\n";
         }
 
     } catch (...) {
-        std::cout << "temp type error\n";
+        std::cout << "温度格式错误\n";
     }
 }
 

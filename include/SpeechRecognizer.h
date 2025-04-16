@@ -12,11 +12,11 @@ public:
     ~SpeechRecognizer();
 
     void setCallback(std::function<void(const std::string&)> cb);
-    void start();  
-    void stop();   
+    void start();  // 启动识别线程
+    void stop();   // 停止识别线程
 
 private:
-    void recognizeLoop();  // Thread function for recognition loop
+    void recognizeLoop();  // 线程主函数
 
     std::string modelPath;
     float sampleRate;
