@@ -26,7 +26,7 @@ SnakeGame::SnakeGame(int width, int height, MAX7219& disp)
       display(disp) {}
 
 SnakeGame::~SnakeGame() {
-    stop(); // 保证析构时不会留下线程
+    stop(); // ensure no threads remain
 }
 
 // void SnakeGame::setNonBlockingRawInput() {
@@ -63,7 +63,7 @@ void SnakeGame::generateApple() {
 }
 
 void SnakeGame::setDirection(Direction d) {
-    // 防止反向移动
+    // don't move to ass
     if ((currentDirection == UP && d == DOWN) ||
         (currentDirection == DOWN && d == UP) ||
         (currentDirection == LEFT && d == RIGHT) ||

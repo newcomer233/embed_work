@@ -1,4 +1,4 @@
-# Install script for directory: /home/newcomer233/Desktop/embed_final_v09
+# Install script for directory: /home/newcomer233/Desktop/embed_work-main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/newcomer233/Desktop/embed_final_v09/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/newcomer233/Desktop/embed_work-main/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

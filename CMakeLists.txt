@@ -7,17 +7,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 头文件目录
 include_directories(
 	include
-	/home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include
-	/home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include
-	/home/newcomer233/Desktop/embed_final_v09/lib/si/include
+	${CMAKE_SOURCE_DIR}/lib/onnxruntime-linux-aarch64-1.21.0/include
+	${CMAKE_SOURCE_DIR}/lib/Linux_aarch64/piper_phonemize/include
+	${CMAKE_SOURCE_DIR}/lib/si/include
 )
 
 # 动态库目录
 link_directories(
 	lib
-	/home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/lib
-	/home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/lib
-	/home/newcomer233/Desktop/embed_final_v09/lib/si/lib
+	${CMAKE_SOURCE_DIR}/lib/onnxruntime-linux-aarch64-1.21.0/lib
+	${CMAKE_SOURCE_DIR}/lib/Linux_aarch64/piper_phonemize/lib
+	${CMAKE_SOURCE_DIR}/lib/si/lib
 )
 
 # 源文件

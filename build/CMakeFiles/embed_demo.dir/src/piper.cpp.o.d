@@ -1,5 +1,5 @@
 CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/piper.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/piper.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/array \
  /usr/include/c++/12/compare /usr/include/c++/12/initializer_list \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
@@ -156,13 +156,13 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
  /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/sstream \
  /usr/include/c++/12/bits/sstream.tcc \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/espeak-ng/speak_lib.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/espeak-ng/speak_lib.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
  /usr/include/c++/12/stdlib.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
  /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -213,7 +213,7 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/c++/12/bits/unordered_map.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
  /usr/include/c++/12/algorithm /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
@@ -221,16 +221,16 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/spdlog.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/common.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/tweakme.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/null_mutex.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/spdlog.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/common.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/tweakme.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/null_mutex.h \
  /usr/include/c++/12/atomic \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/fmt.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/bundled/core.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/bundled/format.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/bundled/core.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/bundled/format-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/fmt.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/bundled/core.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/bundled/format.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/bundled/core.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/bundled/format-inl.h \
  /usr/include/c++/12/climits \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/limits.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/syslimits.h \
@@ -246,22 +246,22 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
  /usr/include/c++/12/bits/locale_conv.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/fmt/bundled/format.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/common-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/registry.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/periodic_worker.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/fmt/bundled/format.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/common-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/registry.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/periodic_worker.h \
  /usr/include/c++/12/condition_variable \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h /usr/include/c++/12/mutex \
  /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
  /usr/include/c++/12/bits/this_thread_sleep.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/periodic_worker-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/registry-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/logger.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/log_msg.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/log_msg-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/os.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/os-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/periodic_worker-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/registry-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/log_msg.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/log_msg-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/os.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/os-inl.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/struct_stat.h \
@@ -287,28 +287,29 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/aarch64-linux-gnu/sys/syscall.h \
- /usr/lib/linux/uapi/arm64/asm/unistd.h /usr/include/asm-generic/unistd.h \
+ /usr/lib/linux/uapi/arm64/asm/unistd.h \
+ /usr/lib/linux/uapi/arm64/asm/unistd_64.h \
  /usr/include/aarch64-linux-gnu/bits/syscall.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/backtracer.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/log_msg_buffer.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/log_msg_buffer-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/circular_q.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/backtracer.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/log_msg_buffer.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/log_msg_buffer-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/circular_q.h \
  /usr/include/c++/12/cassert /usr/include/assert.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/backtracer-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/logger-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/sinks/sink.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/formatter.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/sinks/sink-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/pattern_formatter.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/pattern_formatter-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/fmt_helper.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/sinks/ansicolor_sink.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/console_globals.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/sinks/ansicolor_sink-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/version.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/details/synchronous_factory.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/si/include/spdlog/spdlog-inl.h \
- /home/newcomer233/Desktop/embed_final_v09/include/json.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/backtracer-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/sink.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/formatter.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/sink-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/pattern_formatter.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/pattern_formatter-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/fmt_helper.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/ansicolor_sink.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/console_globals.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/ansicolor_sink-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/version.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/synchronous_factory.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/spdlog-inl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/json.hpp \
  /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
  /usr/include/c++/12/pstl/glue_numeric_defs.h \
  /usr/include/c++/12/forward_list /usr/include/c++/12/bits/forward_list.h \
@@ -329,21 +330,21 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.o: \
  /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/codecvt \
  /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
  /usr/include/c++/12/any \
- /home/newcomer233/Desktop/embed_final_v09/include/piper.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/piper.hpp \
  /usr/include/c++/12/optional \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
  /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
- /home/newcomer233/Desktop/embed_final_v09/include/json.hpp \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8.h \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8/checked.h \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8/core.h \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8/cpp17.h \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8/checked.h \
- /home/newcomer233/Desktop/embed_final_v09/include/utf8/unchecked.h \
- /home/newcomer233/Desktop/embed_final_v09/include/wavfile.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/json.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8.h \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8/checked.h \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8/core.h \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8/cpp17.h \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8/checked.h \
+ /home/newcomer233/Desktop/embed_work-main/include/utf8/unchecked.h \
+ /home/newcomer233/Desktop/embed_work-main/include/wavfile.hpp \
  /usr/include/c++/12/iostream

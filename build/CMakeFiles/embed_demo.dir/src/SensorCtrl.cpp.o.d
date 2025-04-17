@@ -1,8 +1,8 @@
 CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/SensorCtrl.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/SensorCtrl.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SensorCtrl.h \
- /home/newcomer233/Desktop/embed_final_v09/include/PAJ7260U2.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
  /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -168,7 +168,7 @@ CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o: \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/atomic \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
- /home/newcomer233/Desktop/embed_final_v09/include/GestureHandler.h \
+ /home/newcomer233/Desktop/embed_work-main/include/GestureHandler.h \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \

@@ -1,8 +1,8 @@
 CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/WeatherWrapper.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/WeatherWrapper.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/WeatherWrapper.h \
- /home/newcomer233/Desktop/embed_final_v09/include/weather.h \
+ /home/newcomer233/Desktop/embed_work-main/include/WeatherWrapper.h \
+ /home/newcomer233/Desktop/embed_work-main/include/weather.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \

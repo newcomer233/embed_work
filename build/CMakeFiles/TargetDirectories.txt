@@ -1,3 +1,3 @@
-/home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles/embed_demo.dir
-/home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles/edit_cache.dir
-/home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles/rebuild_cache.dir
+/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles/embed_demo.dir
+/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles/edit_cache.dir
+/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles/rebuild_cache.dir

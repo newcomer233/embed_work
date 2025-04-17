@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/weather.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/weather.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/weather.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/weather.h \
+ /home/newcomer233/Desktop/embed_work-main/include/weather.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \

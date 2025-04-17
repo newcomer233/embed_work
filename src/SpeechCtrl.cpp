@@ -28,10 +28,10 @@ void SpeechCtrl::start() {
                 
                 std::cout << "[SpeechCtrl] Parsed Text: " << text << std::endl;
 
-                // ✅ 外部输出原始文本
+                // RAW DATA
                 if (onRawText) onRawText(text);
 
-                    // ✅ 用关键词表匹配触发动作
+                    // MATCHING ACTION
                     for (const auto& [key, action] : keywordMap) {
                         if (text.find(key) != std::string::npos) {
                             if (action == "UP" && onUp) onUp();
@@ -68,4 +68,20 @@ void SpeechCtrl::setOnRight(std::function<void()> cb) { onRight = cb; }
 void SpeechCtrl::setOnModeSwitch(std::function<void()> cb) { onModeSwitch = cb; }
 void SpeechCtrl::setResultCallback(std::function<void(const std::string&)> cb) {
     onRawText = cb;
+}
+
+void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
+    if (!recognizer) {
+        std::cerr << "[SpeechCtrl] recognizer not initialized, skipping setCommandSet()\n";
+        return;
+    }
+
+    // 原有逻辑保持不变
+    if (cmdList == currentCommandSet) {
+        std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
+        return;
+    }
+
+    currentCommandSet = cmdList;
+    recognizer->setGrammar(cmdList);
 }

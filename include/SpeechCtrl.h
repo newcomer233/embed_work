@@ -4,7 +4,7 @@
 #include <atomic>
 #include <string>
 #include "SpeechRecognizer.h"
-
+    
 class SpeechCtrl {
 public:
     SpeechCtrl(const std::string& modelPath);
@@ -18,8 +18,10 @@ public:
     void setOnLeft(std::function<void()> cb);
     void setOnRight(std::function<void()> cb);
     void setOnModeSwitch(std::function<void()> cb);
+    
 
     void setResultCallback(std::function<void(const std::string&)> cb);
+    void setCommandSet( const std::vector<std::string>& commands);
     
 private:
     void listenLoop();
@@ -37,4 +39,5 @@ private:
     std::function<void()> onModeSwitch;
 
     std::function<void(const std::string&)> onRawText;
+    std::vector<std::string> currentCommandSet;
 };

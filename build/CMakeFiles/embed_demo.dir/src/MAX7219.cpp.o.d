@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/MAX7219.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/MAX7219.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/MAX7219.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
  /usr/include/c++/12/cstdint \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -22,7 +22,7 @@ CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/newcomer233/Desktop/embed_final_v09/include/patterns.h \
+ /home/newcomer233/Desktop/embed_work-main/include/patterns.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
  /usr/include/c++/12/bits/stringfwd.h \

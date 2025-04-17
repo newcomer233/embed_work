@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/PAJ7260U2.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/PAJ7260U2.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
  /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \

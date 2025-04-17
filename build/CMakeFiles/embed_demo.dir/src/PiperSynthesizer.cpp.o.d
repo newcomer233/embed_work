@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/PiperSynthesizer.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/PiperSynthesizer.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/PiperSynthesizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -117,7 +117,7 @@ CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
- /home/newcomer233/Desktop/embed_final_v09/include/piper.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/piper.hpp \
  /usr/include/c++/12/fstream /usr/include/c++/12/istream \
  /usr/include/c++/12/ios /usr/include/c++/12/exception \
  /usr/include/c++/12/bits/exception_ptr.h \
@@ -179,12 +179,12 @@ CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: \
  /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/map \
  /usr/include/c++/12/bits/stl_tree.h /usr/include/c++/12/bits/stl_map.h \
  /usr/include/c++/12/bits/stl_multimap.h /usr/include/c++/12/optional \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
  /usr/include/c++/12/stdlib.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
  /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -223,18 +223,18 @@ CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
  /usr/include/c++/12/algorithm \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
  /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
- /home/newcomer233/Desktop/embed_final_v09/include/json.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/json.hpp \
  /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
  /usr/include/c++/12/pstl/glue_numeric_defs.h \
  /usr/include/c++/12/forward_list /usr/include/c++/12/bits/forward_list.h \
@@ -262,4 +262,4 @@ CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
  /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
  /usr/include/c++/12/any /usr/include/c++/12/iostream \
- /home/newcomer233/Desktop/embed_final_v09/include/json.hpp
+ /home/newcomer233/Desktop/embed_work-main/include/json.hpp

@@ -1,5 +1,5 @@
 CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/EMBED_main.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/EMBED_main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -156,9 +156,9 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
  /usr/include/c++/12/limits /usr/include/c++/12/ctime \
  /usr/include/c++/12/bits/parse_numbers.h /usr/include/c++/12/chrono \
- /home/newcomer233/Desktop/embed_final_v09/include/MAX7219.h \
- /home/newcomer233/Desktop/embed_final_v09/include/patterns.h \
- /home/newcomer233/Desktop/embed_final_v09/include/app_controller.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
+ /home/newcomer233/Desktop/embed_work-main/include/patterns.h \
+ /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
  /usr/include/c++/12/atomic /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
@@ -179,12 +179,12 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/uniform_int_dist.h \
- /home/newcomer233/Desktop/embed_final_v09/include/snake_game.h \
- /home/newcomer233/Desktop/embed_final_v09/include/snake.h \
+ /home/newcomer233/Desktop/embed_work-main/include/snake_game.h \
+ /home/newcomer233/Desktop/embed_work-main/include/snake.h \
  /usr/include/c++/12/utility /usr/include/c++/12/bits/stl_relops.h \
- /home/newcomer233/Desktop/embed_final_v09/include/MAX7219.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SensorCtrl.h \
- /home/newcomer233/Desktop/embed_final_v09/include/PAJ7260U2.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
  /usr/include/c++/12/mutex /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
  /usr/include/c++/12/condition_variable \
@@ -200,7 +200,7 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/asm-generic/posix_types.h /usr/include/gpiod.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
  /usr/include/c++/12/stdlib.h \
- /home/newcomer233/Desktop/embed_final_v09/include/GestureHandler.h \
+ /home/newcomer233/Desktop/embed_work-main/include/GestureHandler.h \
  /usr/include/c++/12/memory \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
@@ -208,25 +208,26 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/newcomer233/Desktop/embed_final_v09/include/MPU6050Ctrl.h \
- /home/newcomer233/Desktop/embed_final_v09/include/MPU6050.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SpeechCtrl.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SpeechRecognizer.h \
- /home/newcomer233/Desktop/embed_final_v09/include/WeatherWrapper.h \
- /home/newcomer233/Desktop/embed_final_v09/include/weather.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MPU6050Ctrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MPU6050.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+ /home/newcomer233/Desktop/embed_work-main/include/WeatherWrapper.h \
+ /home/newcomer233/Desktop/embed_work-main/include/weather.h \
  /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
  /usr/include/c++/12/bits/stl_map.h \
  /usr/include/c++/12/bits/stl_multimap.h \
- /home/newcomer233/Desktop/embed_final_v09/include/PiperSynthesizer.h \
- /home/newcomer233/Desktop/embed_final_v09/include/piper.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/piper.hpp \
  /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
  /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/optional \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_api.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_c_api.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h \
  /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -250,18 +251,18 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/tr1/poly_laguerre.tcc \
  /usr/include/c++/12/tr1/riemann_zeta.tcc /usr/include/c++/12/cstring \
  /usr/include/c++/12/cstddef \
- /home/newcomer233/Desktop/embed_final_v09/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
+ /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_cxx_inline.h \
  /usr/include/c++/12/algorithm \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
- /home/newcomer233/Desktop/embed_final_v09/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phoneme_ids.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/shared.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp \
+ /home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/tashkeel.hpp \
  /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
- /home/newcomer233/Desktop/embed_final_v09/include/json.hpp \
+ /home/newcomer233/Desktop/embed_work-main/include/json.hpp \
  /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
  /usr/include/c++/12/pstl/glue_numeric_defs.h \
  /usr/include/c++/12/forward_list /usr/include/c++/12/bits/forward_list.h \

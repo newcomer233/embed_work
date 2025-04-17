@@ -33,12 +33,12 @@ MPU6050::~MPU6050() {
 bool MPU6050::init() {
     i2c_fd_ = open(i2c_dev_, O_RDWR);
     if (i2c_fd_ < 0 || ioctl(i2c_fd_, I2C_SLAVE, addr_) < 0) {
-        std::cerr << "I2C 初始化失败\n";
+        std::cerr << "I2C initial fail\n";
         return false;
     }
 
     if (!deviceInit()) {
-        std::cerr << "MPU6050 设备初始化失败\n";
+        std::cerr << "MPU6050 initial fail\n";
         return false;
     }
 

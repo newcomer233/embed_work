@@ -21,12 +21,12 @@ Paj7260U2::~Paj7260U2() {
 bool Paj7260U2::init() {
     i2c_fd_ = open(i2c_dev_, O_RDWR);
     if (i2c_fd_ < 0 || ioctl(i2c_fd_, I2C_SLAVE, addr_) < 0) {
-        std::cerr << "I2C 初始化失败\n";
+        std::cerr << "I2C initial fail\n";
         return false;
     }
 
     if (!deviceInit()) {
-        std::cerr << "PAJ7260U2 设备初始化失败\n";
+        std::cerr << "PAJ7260U2 initial fail\n";
         return false;
     }
 
@@ -66,20 +66,20 @@ bool Paj7260U2::deviceInit() {
     for (const auto& reg : init_regs) {
         uint8_t buf[2] = {reg.reg, reg.val};
         if (write(i2c_fd_, buf, 2) != 2) {
-            std::cerr << "初始化寄存器失败: 0x" << std::hex << int(reg.reg) << std::endl;
+            std::cerr << "fail to initial: 0x" << std::hex << int(reg.reg) << std::endl;
             return false;
         }
-        usleep(1000); // 延时以确保写入稳定
+        usleep(1000); // delay for stable
     }
 
-    // 切换到 Bank 1，启动手势识别引擎
+    // switch to bank1 : start
     uint8_t bank1_enable[] = {0xEF, 0x01};
     write(i2c_fd_, bank1_enable, 2);
 
-    uint8_t gesture_start[] = {0x72, 0x01}; // 启动 gesture engine
+    uint8_t gesture_start[] = {0x72, 0x01}; // gesture engine
     write(i2c_fd_, gesture_start, 2);
 
-    // 切回 Bank 0
+    // switch to bank0
     uint8_t bank0_back[] = {0xEF, 0x00};
     write(i2c_fd_, bank0_back, 2);
 

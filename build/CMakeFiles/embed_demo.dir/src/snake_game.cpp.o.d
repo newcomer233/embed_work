@@ -1,8 +1,8 @@
 CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/snake_game.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/snake_game.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/snake_game.h \
- /home/newcomer233/Desktop/embed_final_v09/include/snake.h \
+ /home/newcomer233/Desktop/embed_work-main/include/snake_game.h \
+ /home/newcomer233/Desktop/embed_work-main/include/snake.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -49,7 +49,7 @@ CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: \
  /usr/include/c++/12/bits/range_access.h \
  /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
- /home/newcomer233/Desktop/embed_final_v09/include/MAX7219.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
  /usr/include/c++/12/cstdint \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
@@ -59,7 +59,7 @@ CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/newcomer233/Desktop/embed_final_v09/include/patterns.h \
+ /home/newcomer233/Desktop/embed_work-main/include/patterns.h \
  /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
  /usr/include/c++/12/iosfwd /usr/include/c++/12/bits/stringfwd.h \
  /usr/include/c++/12/bits/postypes.h /usr/include/c++/12/cwchar \

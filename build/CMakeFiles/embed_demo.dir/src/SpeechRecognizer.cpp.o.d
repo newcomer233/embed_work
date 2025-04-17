@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/SpeechRecognizer.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/SpeechRecognizer.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SpeechRecognizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -157,7 +157,8 @@ CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: \
  /usr/include/c++/12/bits/parse_numbers.h /usr/include/c++/12/atomic \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
- /home/newcomer233/Desktop/embed_final_v09/include/vosk_api.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/exception \
  /usr/include/c++/12/bits/exception_ptr.h \
@@ -182,4 +183,5 @@ CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc /usr/include/c++/12/cstring \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/12/sstream \
+ /usr/include/c++/12/bits/sstream.tcc

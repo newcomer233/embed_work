@@ -5,6 +5,7 @@
 #include <functional>
 #include <thread>
 #include <atomic>
+#include "vosk_api.h"
 
 class SpeechRecognizer {
 public:
@@ -12,11 +13,15 @@ public:
     ~SpeechRecognizer();
 
     void setCallback(std::function<void(const std::string&)> cb);
-    void start();  // 启动识别线程
-    void stop();   // 停止识别线程
+    void start();  // start
+    void stop();   // stop
 
+    void setGrammar(const std::vector<std::string>& commands);
 private:
-    void recognizeLoop();  // 线程主函数
+    void recognizeLoop();  // main threads
+
+    VoskModel* model = nullptr;
+    VoskRecognizer* recognizer = nullptr;
 
     std::string modelPath;
     float sampleRate;

@@ -12,11 +12,11 @@ SensorCtrl::~SensorCtrl() {
 
 bool SensorCtrl::init() {
     if (!paj_->init()) {
-        std::cerr << "[SensorCtrl] 初始化 PAJ7260U2 失败\n";
+        std::cerr << "[SensorCtrl] fail to initial PAJ7260U2\n";
         return false;
     }
     paj_->registerCallback(this);
-    std::cout << "[SensorCtrl] 初始化完成\n";
+    std::cout << "[SensorCtrl] initial complete\n";
     return true;
 }
 
@@ -31,7 +31,7 @@ void SensorCtrl::setGestureHandler(GestureHandler* handler) {
 }
 
 void SensorCtrl::onGestureDetected(const Paj7260Data& data) {
-    std::cout << "[SensorCtrl] 检测到手势: 0x" << std::hex << (int)data.gesture << std::dec << "\n";
+    std::cout << "[SensorCtrl] gesture detected: 0x" << std::hex << (int)data.gesture << std::dec << "\n";
     if (gestureHandler_) {
         gestureHandler_->handleGesture(data.gesture);
     }

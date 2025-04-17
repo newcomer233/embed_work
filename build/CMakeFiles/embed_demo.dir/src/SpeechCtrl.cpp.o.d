@@ -1,7 +1,7 @@
 CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: \
- /home/newcomer233/Desktop/embed_final_v09/src/SpeechCtrl.cpp \
+ /home/newcomer233/Desktop/embed_work-main/src/SpeechCtrl.cpp \
  /usr/include/stdc-predef.h \
- /home/newcomer233/Desktop/embed_final_v09/include/SpeechCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechCtrl.h \
  /usr/include/c++/12/functional \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -154,8 +154,9 @@ CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
- /home/newcomer233/Desktop/embed_final_v09/include/SpeechRecognizer.h \
- /home/newcomer233/Desktop/embed_final_v09/include/keywords.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+ /home/newcomer233/Desktop/embed_work-main/include/keywords.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/exception \
  /usr/include/c++/12/bits/exception_ptr.h \

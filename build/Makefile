@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/newcomer233/Desktop/embed_final_v09
+CMAKE_SOURCE_DIR = /home/newcomer233/Desktop/embed_work-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/newcomer233/Desktop/embed_final_v09/build
+CMAKE_BINARY_DIR = /home/newcomer233/Desktop/embed_work-main/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles /home/newcomer233/Desktop/embed_final_v09/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_work-main/build/CMakeFiles /home/newcomer233/Desktop/embed_work-main/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_final_v09/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newcomer233/Desktop/embed_work-main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
