@@ -18,10 +18,10 @@ I finally know why told us don't use GPT4..when translate PPS sentence to Englis
 We utilize the following open-source projects in our system:
 
 VOSK - A lightweight and accurate offline speech recognition toolkit.
-{https://github.com/alphacep/vosk-api}
+  https://github.com/alphacep/vosk-api
 
 Piper - A fast and high-quality neural text-to-speech (TTS) system optimized for local execution, especially on embedded devices like the Raspberry Pi.
-{https://github.com/rhasspy/piper}
+  https://github.com/rhasspy/piper
 
 These components enable our system to perform real-time, local speech recognition and synthesis without relying on cloud services.
 
