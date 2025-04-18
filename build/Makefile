@@ -129,6 +129,54 @@ embed_demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/build
 .PHONY : embed_demo/fast
 
+src/AppStateMachine.o: src/AppStateMachine.cpp.o
+.PHONY : src/AppStateMachine.o
+
+# target to build an object file
+src/AppStateMachine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o
+.PHONY : src/AppStateMachine.cpp.o
+
+src/AppStateMachine.i: src/AppStateMachine.cpp.i
+.PHONY : src/AppStateMachine.i
+
+# target to preprocess a source file
+src/AppStateMachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.i
+.PHONY : src/AppStateMachine.cpp.i
+
+src/AppStateMachine.s: src/AppStateMachine.cpp.s
+.PHONY : src/AppStateMachine.s
+
+# target to generate assembly for a file
+src/AppStateMachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.s
+.PHONY : src/AppStateMachine.cpp.s
+
+src/AppStateManager.o: src/AppStateManager.cpp.o
+.PHONY : src/AppStateManager.o
+
+# target to build an object file
+src/AppStateManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o
+.PHONY : src/AppStateManager.cpp.o
+
+src/AppStateManager.i: src/AppStateManager.cpp.i
+.PHONY : src/AppStateManager.i
+
+# target to preprocess a source file
+src/AppStateManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.i
+.PHONY : src/AppStateManager.cpp.i
+
+src/AppStateManager.s: src/AppStateManager.cpp.s
+.PHONY : src/AppStateManager.s
+
+# target to generate assembly for a file
+src/AppStateManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/embed_demo.dir/build.make CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.s
+.PHONY : src/AppStateManager.cpp.s
+
 src/EMBED_main.o: src/EMBED_main.cpp.o
 .PHONY : src/EMBED_main.o
 
@@ -522,6 +570,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... embed_demo"
+	@echo "... src/AppStateMachine.o"
+	@echo "... src/AppStateMachine.i"
+	@echo "... src/AppStateMachine.s"
+	@echo "... src/AppStateManager.o"
+	@echo "... src/AppStateManager.i"
+	@echo "... src/AppStateManager.s"
 	@echo "... src/EMBED_main.o"
 	@echo "... src/EMBED_main.i"
 	@echo "... src/EMBED_main.s"

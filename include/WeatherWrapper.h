@@ -7,9 +7,9 @@ class WeatherWrapper {
 public:
     WeatherWrapper(const std::string& apiKey, const std::string& city);
 
-    // 主功能
-    void updateWeather();                     // 更新并缓存当前天气数据
-    std::string getWeatherCommand() const;    // 返回类似 "r-2" 的命令字符串
+    // main function
+    void updateWeather();                     // update and store data
+    std::string getWeatherCommand() const;    // return the string for app_controller,eg."s -2"
 
 private:
     Weather weather;

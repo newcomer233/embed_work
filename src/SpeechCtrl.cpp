@@ -1,6 +1,7 @@
 #include "SpeechCtrl.h"
 #include "keywords.h" 
 #include <iostream>
+#include <mutex>
 
 SpeechCtrl::SpeechCtrl(const std::string& modelPath)
     : modelPath(modelPath), running(false), recognizer(nullptr) {}
@@ -71,12 +72,13 @@ void SpeechCtrl::setResultCallback(std::function<void(const std::string&)> cb) {
 }
 
 void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
+    std::lock_guard<std::mutex> lock(commandMutex);
+
     if (!recognizer) {
         std::cerr << "[SpeechCtrl] recognizer not initialized, skipping setCommandSet()\n";
         return;
     }
 
-    // 原有逻辑保持不变
     if (cmdList == currentCommandSet) {
         std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
         return;

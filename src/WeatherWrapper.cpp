@@ -29,7 +29,7 @@ char WeatherWrapper::mapDescriptionToCode(const std::string& desc) const {
     if (lower.find("sun") != std::string::npos || lower.find("clear") != std::string::npos)
         return 's';
 
-    return 'g';  // 默认返回 g
+    return 'g';  // original 
 }
 
 std::string WeatherWrapper::toLower(const std::string& input) const {

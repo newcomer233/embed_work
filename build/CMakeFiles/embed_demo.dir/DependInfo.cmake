@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/newcomer233/Desktop/embed_work-main/src/AppStateMachine.cpp" "CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o" "gcc" "CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o.d"
+  "/home/newcomer233/Desktop/embed_work-main/src/AppStateManager.cpp" "CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o" "gcc" "CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o.d"
   "/home/newcomer233/Desktop/embed_work-main/src/EMBED_main.cpp" "CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o" "gcc" "CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o.d"
   "/home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp" "CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o" "gcc" "CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o.d"
   "/home/newcomer233/Desktop/embed_work-main/src/MAX7219.cpp" "CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o" "gcc" "CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o.d"

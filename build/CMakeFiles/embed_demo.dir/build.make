@@ -69,10 +69,38 @@ include CMakeFiles/embed_demo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/embed_demo.dir/flags.make
 
+CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o: CMakeFiles/embed_demo.dir/flags.make
+CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/AppStateMachine.cpp
+CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o -MF CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o.d -o CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/AppStateMachine.cpp
+
+CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/newcomer233/Desktop/embed_work-main/src/AppStateMachine.cpp > CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.i
+
+CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/newcomer233/Desktop/embed_work-main/src/AppStateMachine.cpp -o CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.s
+
+CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o: CMakeFiles/embed_demo.dir/flags.make
+CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/AppStateManager.cpp
+CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o -MF CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o.d -o CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/AppStateManager.cpp
+
+CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/newcomer233/Desktop/embed_work-main/src/AppStateManager.cpp > CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.i
+
+CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/newcomer233/Desktop/embed_work-main/src/AppStateManager.cpp -o CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.s
+
 CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/EMBED_main.cpp
 CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o -MF CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o.d -o CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/EMBED_main.cpp
 
 CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o -MF CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o.d -o CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp
 
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/MAX7219.cpp
 CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o -MF CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o.d -o CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/MAX7219.cpp
 
 CMakeFiles/embed_demo.dir/src/MAX7219.cpp.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/embed_demo.dir/src/MAX7219.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/MPU6050.cpp
 CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o -MF CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o.d -o CMakeFiles/embed_demo.dir/src/MPU6050.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/MPU6050.cpp
 
 CMakeFiles/embed_demo.dir/src/MPU6050.cpp.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/embed_demo.dir/src/MPU6050.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/MPU6050Ctrl.cpp
 CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o -MF CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o.d -o CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/MPU6050Ctrl.cpp
 
 CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.i: cmake_force
@@ -142,7 +170,7 @@ CMakeFiles/embed_demo.dir/src/MPU6050Ctrl.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp
 CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o -MF CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o.d -o CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp
 
 CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/embed_demo.dir/src/PAJ7260U2.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/PiperSynthesizer.cpp
 CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o -MF CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o.d -o CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/PiperSynthesizer.cpp
 
 CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/embed_demo.dir/src/PiperSynthesizer.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/SensorCtrl.cpp
 CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o -MF CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o.d -o CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/SensorCtrl.cpp
 
 CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/embed_demo.dir/src/SensorCtrl.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/SpeechCtrl.cpp
 CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o -MF CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o.d -o CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/SpeechCtrl.cpp
 
 CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.i: cmake_force
@@ -198,7 +226,7 @@ CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/SpeechRecognizer.cpp
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o -MF CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o.d -o CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/SpeechRecognizer.cpp
 
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.i: cmake_force
@@ -212,7 +240,7 @@ CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/WeatherWrapper.cpp
 CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o -MF CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o.d -o CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/WeatherWrapper.cpp
 
 CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.i: cmake_force
@@ -226,7 +254,7 @@ CMakeFiles/embed_demo.dir/src/WeatherWrapper.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/app_controller.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/app_controller.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/app_controller.cpp
 CMakeFiles/embed_demo.dir/src/app_controller.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/embed_demo.dir/src/app_controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/embed_demo.dir/src/app_controller.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/app_controller.cpp.o -MF CMakeFiles/embed_demo.dir/src/app_controller.cpp.o.d -o CMakeFiles/embed_demo.dir/src/app_controller.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/app_controller.cpp
 
 CMakeFiles/embed_demo.dir/src/app_controller.cpp.i: cmake_force
@@ -240,7 +268,7 @@ CMakeFiles/embed_demo.dir/src/app_controller.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/piper.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/piper.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/piper.cpp
 CMakeFiles/embed_demo.dir/src/piper.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/embed_demo.dir/src/piper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/embed_demo.dir/src/piper.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/piper.cpp.o -MF CMakeFiles/embed_demo.dir/src/piper.cpp.o.d -o CMakeFiles/embed_demo.dir/src/piper.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/piper.cpp
 
 CMakeFiles/embed_demo.dir/src/piper.cpp.i: cmake_force
@@ -254,7 +282,7 @@ CMakeFiles/embed_demo.dir/src/piper.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/snake.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/snake.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/snake.cpp
 CMakeFiles/embed_demo.dir/src/snake.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/embed_demo.dir/src/snake.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/embed_demo.dir/src/snake.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/snake.cpp.o -MF CMakeFiles/embed_demo.dir/src/snake.cpp.o.d -o CMakeFiles/embed_demo.dir/src/snake.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/snake.cpp
 
 CMakeFiles/embed_demo.dir/src/snake.cpp.i: cmake_force
@@ -268,7 +296,7 @@ CMakeFiles/embed_demo.dir/src/snake.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/snake_game.cpp
 CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/embed_demo.dir/src/snake_game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/embed_demo.dir/src/snake_game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/snake_game.cpp.o -MF CMakeFiles/embed_demo.dir/src/snake_game.cpp.o.d -o CMakeFiles/embed_demo.dir/src/snake_game.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/snake_game.cpp
 
 CMakeFiles/embed_demo.dir/src/snake_game.cpp.i: cmake_force
@@ -282,7 +310,7 @@ CMakeFiles/embed_demo.dir/src/snake_game.cpp.s: cmake_force
 CMakeFiles/embed_demo.dir/src/weather.cpp.o: CMakeFiles/embed_demo.dir/flags.make
 CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/weather.cpp
 CMakeFiles/embed_demo.dir/src/weather.cpp.o: CMakeFiles/embed_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/embed_demo.dir/src/weather.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/embed_demo.dir/src/weather.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/embed_demo.dir/src/weather.cpp.o -MF CMakeFiles/embed_demo.dir/src/weather.cpp.o.d -o CMakeFiles/embed_demo.dir/src/weather.cpp.o -c /home/newcomer233/Desktop/embed_work-main/src/weather.cpp
 
 CMakeFiles/embed_demo.dir/src/weather.cpp.i: cmake_force
@@ -295,6 +323,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.s: cmake_force
 
 # Object files for target embed_demo
 embed_demo_OBJECTS = \
+"CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o" \
+"CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o" \
 "CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o" \
 "CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o" \
 "CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o" \
@@ -315,6 +345,8 @@ embed_demo_OBJECTS = \
 # External object files for target embed_demo
 embed_demo_EXTERNAL_OBJECTS =
 
+embed_demo: CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o
+embed_demo: CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o
 embed_demo: CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o
 embed_demo: CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o
 embed_demo: CMakeFiles/embed_demo.dir/src/MAX7219.cpp.o
@@ -333,7 +365,7 @@ embed_demo: CMakeFiles/embed_demo.dir/src/snake_game.cpp.o
 embed_demo: CMakeFiles/embed_demo.dir/src/weather.cpp.o
 embed_demo: CMakeFiles/embed_demo.dir/build.make
 embed_demo: CMakeFiles/embed_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable embed_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/newcomer233/Desktop/embed_work-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable embed_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/embed_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

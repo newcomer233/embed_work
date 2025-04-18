@@ -11,7 +11,6 @@
 #include <mutex>
 
 
-
 SnakeGame::SnakeGame(int width, int height, MAX7219& disp)
     : width(width),
       height(height),
@@ -63,6 +62,7 @@ void SnakeGame::generateApple() {
 }
 
 void SnakeGame::setDirection(Direction d) {
+    std::lock_guard<std::mutex> lock(directionMutex);
     // don't move to ass
     if ((currentDirection == UP && d == DOWN) ||
         (currentDirection == DOWN && d == UP) ||
@@ -86,7 +86,6 @@ void SnakeGame::run() {
     generateApple();
 
     while (running) {
-        // 原有方向控制仍可保留（键盘输入）：
         // char buf[3];
         // int n = read(STDIN_FILENO, buf, sizeof(buf));
         // if (n == 3 && buf[0] == '\033' && buf[1] == '[') {
@@ -104,9 +103,10 @@ void SnakeGame::run() {
         // }
         Direction dir;
         {
+            std::lock_guard<std::mutex> lock(directionMutex);
             dir = currentDirection;
         }
-        if (!running) break;
+        if (!running) break; 
 
 
         if (frameCount % 2 == 0) {

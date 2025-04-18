@@ -5,6 +5,7 @@
 #include "MAX7219.h"
 #include "thread"
 #include <atomic>
+#include <mutex>
 
 class SnakeGame {
 public:
@@ -12,8 +13,8 @@ public:
     ~SnakeGame();
     // void run();
     void start();
-    void setDirection(Direction d); // 外部方向接口
-    void stop(); // 停止游戏
+    void setDirection(Direction d); 
+    void stop(); 
 
 private:
     int width, height;
@@ -21,7 +22,7 @@ private:
     bool flash;
     int frameCount;
 
-    Direction currentDirection; // 当前方向
+    Direction currentDirection; 
     Snake snake;
     MAX7219 display;
     std::thread gameThread;
@@ -32,7 +33,8 @@ private:
     void generateApple();
     bool isOccupied(int x, int y) const;
 
-    std::atomic<bool> running = true; // 游戏运行状态
+    std::atomic<bool> running = true; // running status
+    std::mutex directionMutex;
 };
 
 #endif

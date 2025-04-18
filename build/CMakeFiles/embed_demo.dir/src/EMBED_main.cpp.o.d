@@ -183,10 +183,10 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /home/newcomer233/Desktop/embed_work-main/include/snake.h \
  /usr/include/c++/12/utility /usr/include/c++/12/bits/stl_relops.h \
  /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
- /home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h \
- /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
  /usr/include/c++/12/mutex /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
  /usr/include/c++/12/condition_variable \
  /usr/include/c++/12/bits/shared_ptr.h \
  /usr/include/c++/12/bits/shared_ptr_base.h \
@@ -210,9 +210,6 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/pstl/execution_defs.h \
  /home/newcomer233/Desktop/embed_work-main/include/MPU6050Ctrl.h \
  /home/newcomer233/Desktop/embed_work-main/include/MPU6050.h \
- /home/newcomer233/Desktop/embed_work-main/include/SpeechCtrl.h \
- /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h \
- /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
  /home/newcomer233/Desktop/embed_work-main/include/WeatherWrapper.h \
  /home/newcomer233/Desktop/embed_work-main/include/weather.h \
  /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
@@ -287,4 +284,17 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
  /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
- /usr/include/c++/12/any
+ /usr/include/c++/12/any \
+ /home/newcomer233/Desktop/embed_work-main/include/AppStateManager.h \
+ /home/newcomer233/Desktop/embed_work-main/include/AppEvent.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MPUHandler.h \
+ /home/newcomer233/Desktop/embed_work-main/include/MPU6050Ctrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/GestureHandler_Event.h \
+ /home/newcomer233/Desktop/embed_work-main/include/snake_game.h \
+ /home/newcomer233/Desktop/embed_work-main/include/VoiceCommandHandler.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechCtrl.h \
+ /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+ /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
+ /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
+ /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h

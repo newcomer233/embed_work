@@ -1,0 +1,28 @@
+[SpeechCtrl] Parsed Text: 
+[IRQ] falling edge detected
+INT_STATUS: 0x41
+[MPU INT]  SwitchMode triggered
+[AppStateMachine] Event: 0
+[AppStateManager] State Switch 0 -> 1
+LOG (VoskAPI:UpdateGrammarFst():recognizer.cc:287) ["up", "down", "left", "right", "time", "game", "counter", "weather", "mode", "switch"]
+LOG (VoskAPI:Estimate():language_model.cc:142) Estimating language model with ngram-order=2, discount=0.5
+LOG (VoskAPI:OutputToFst():language_model.cc:209) Created language model with 11 states and 20 arcs.
+[SpeechRecognizer] Grammar updated: ["up", "down", "left", "right", "time", "game", "counter", "weather", "mode", "switch"]
+✅ Synthesis OK. Output: ../output.wav
+Playing WAVE '../output.wav' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+[SpeechCtrl] Raw result: {
+  "text" : ""
+}
+[SpeechCtrl] Parsed Text: 
+[IRQ] falling edge dected
+[SensorCtrl] gesture detected: 0x0
+[IRQ] falling edge detected
+INT_STATUS: 0x41
+[MPU INT]  SwitchMode triggered
+[AppStateMachine] Event: 0
+[AppStateManager] State Switch 1 -> 2
+Game Over
+LOG (VoskAPI:UpdateGrammarFst():recognizer.cc:287) ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "time", "game", "counter", "weather", "mode", "switch"]
+LOG (VoskAPI:Estimate():language_model.cc:142) Estimating language model with ngram-order=2, discount=0.5
+LOG (VoskAPI:OutputToFst():language_model.cc:209) Created language model with 17 states and 32 arcs.
+Segmentation fault

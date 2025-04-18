@@ -4,7 +4,8 @@
 #include <atomic>
 #include <string>
 #include "SpeechRecognizer.h"
-    
+#include <mutex> 
+
 class SpeechCtrl {
 public:
     SpeechCtrl(const std::string& modelPath);
@@ -21,8 +22,7 @@ public:
     
 
     void setResultCallback(std::function<void(const std::string&)> cb);
-    void setCommandSet( const std::vector<std::string>& commands);
-    
+    void setCommandSet(const std::vector<std::string>& commands);
 private:
     void listenLoop();
 
@@ -40,4 +40,6 @@ private:
 
     std::function<void(const std::string&)> onRawText;
     std::vector<std::string> currentCommandSet;
+
+    std::mutex commandMutex;
 };

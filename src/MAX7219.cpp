@@ -13,7 +13,7 @@
 MAX7219::MAX7219() {
     spi_fd = open(SPI_DEVICE, O_RDWR);
     if (spi_fd < 0) {
-        std::cerr << "无法打开 SPI 设备: " << SPI_DEVICE << std::endl;
+        std::cerr << "cannot open SPI device:" << SPI_DEVICE << std::endl;
         exit(1);
     }
 
@@ -107,7 +107,7 @@ void MAX7219::displayTime(int hour, int minute) {
 
         uint8_t mLeft = Patterns::digitPatterns[minuteTens][i] >> 4;
         uint8_t mRight = Patterns::digitPatterns[minuteUnits][i] >> 4;
-        minuteMerged[i] = ((mLeft << 4) | mRight) >> 1; // 秒右移一格
+        minuteMerged[i] = ((mLeft << 4) | mRight) >> 1; 
 
         writeRegister(i + 1, hourMerged[i], i + 1, minuteMerged[i]);
     }
@@ -115,12 +115,12 @@ void MAX7219::displayTime(int hour, int minute) {
 
 void MAX7219::displayTemperature(int temp, int device) {
     if (temp >= 0 && temp <= 9) {
-        // 个位数：右移数字 + 加摄氏度
+        // Combine temperature and Celsius symbol
         for (int i = 0; i < 8; ++i) {
-            uint8_t digit = Patterns::digitPatterns[temp][i] >> 4;     // 取左4列
-            digit >>= 1;                                               // 再右移一位
-            uint8_t cmark = Patterns::Celcius4x8[i] >> 4;              // 摄氏度图案
-            uint8_t row = (digit << 4) | cmark;                        // 合并
+            uint8_t digit = Patterns::digitPatterns[temp][i] >> 4;     
+            digit >>= 1;                                               
+            uint8_t cmark = Patterns::Celcius4x8[i] >> 4;              
+            uint8_t row = (digit << 4) | cmark;                        
             sendData(device, i + 1, row);
         }
     } else if (temp >= 10 && temp <= 99) {
@@ -165,21 +165,21 @@ void MAX7219::displayTimeWithColon(int hour, int minute, bool colonVisible) {
         uint8_t hourRight = Patterns::digitPatterns[hourUnits][i] >> 4;
         hourMerged[i] = (hourLeft << 4) | hourRight;
 
-        // 分钟部分，左移一位去掉末尾列
+        // Minute part, shift left by one to remove last column
         uint8_t minuteLeft = Patterns::digitPatterns[minuteTens][i] >> 4;
         uint8_t minuteRight = Patterns::digitPatterns[minuteUnits][i] >> 4;
         minuteMerged[i] = ((minuteLeft << 4) | minuteRight) >> 1;
 
-        // 根据冒号可见性设置冒号
+        // Set colon
         if (colonVisible) {
-            if (i == 4) hourMerged[i] |= 0b00000001;   // 小时模块冒号上点
-            if (i == 3) minuteMerged[i] |= 0b10000000; // 分钟模块冒号下点
+            if (i == 4) hourMerged[i] |= 0b00000001;   
+            if (i == 3) minuteMerged[i] |= 0b10000000; 
         } else {
-            if (i == 4) hourMerged[i] &= 0b11111110;   // 清除小时模块冒号上点
-            if (i == 3) minuteMerged[i] &= 0b01111111; // 清除分钟模块冒号下点
+            if (i == 4) hourMerged[i] &= 0b11111110;   
+            if (i == 3) minuteMerged[i] &= 0b01111111; 
         }
 
-        // 更新缓存并发送数据
+        // Update cache and send data
         devicePatterns[0][i] = hourMerged[i];
         devicePatterns[1][i] = minuteMerged[i];
 
@@ -222,9 +222,9 @@ void MAX7219::refresh() {
     for (int row = 0; row < 8; ++row) {
         uint8_t tx[4];
         tx[0] = row + 1;
-        tx[1] = devicePatterns[1][row];  // 右边设备（显示左边）
+        tx[1] = devicePatterns[1][row];  
         tx[2] = row + 1;
-        tx[3] = devicePatterns[0][row];  // 左边设备（显示右边）
+        tx[3] = devicePatterns[0][row];  
         write(spi_fd, tx, 4);
     }
 }

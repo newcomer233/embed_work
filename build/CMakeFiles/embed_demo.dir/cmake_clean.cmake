@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o"
+  "CMakeFiles/embed_demo.dir/src/AppStateMachine.cpp.o.d"
+  "CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o"
+  "CMakeFiles/embed_demo.dir/src/AppStateManager.cpp.o.d"
   "CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o"
   "CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o.d"
   "CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o"
