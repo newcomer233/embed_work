@@ -39,7 +39,7 @@ int main() {
 
 
     // Voice
-    VoiceCommandHandler voiceCtrl(snake, app, synth, API_KEY, CITY, [&](AppEvent e) {
+    VoiceCommandHandler voiceCtrl(snake, app, synth, stateManager,API_KEY, CITY, [&](AppEvent e) {
         stateMachine.handleEvent(e);
     });
     
@@ -72,8 +72,14 @@ int main() {
         "time", "game", "counter", "weather", "mode", "switch"});
         synth.synthesizeTextToFile("counter mode", outputPath);
         synth.playAudioFile(outputPath);
+
+        app.setTimerFinishedCallback([&]() {
+            synth.synthesizeTextToFile("counter finished", outputPath);
+            synth.playAudioFile(outputPath);
+        });
+
         app.handleCommand("timer");
-        // app.setTimerFinishedCallback( )
+
     });
     stateManager.onExit(AppState::COUNTER, [&]() {
         app.shutdown();
@@ -94,10 +100,6 @@ int main() {
     });
 
 
-
-    stateManager.onEnter(AppState::TIME, [&]() { voiceCtrl.setAppState(AppState::TIME); });
-    stateManager.onEnter(AppState::GAME, [&]() { voiceCtrl.setAppState(AppState::GAME); });
-
     // MPU 
     MPU6050Ctrl mpuCtrl(13, "/dev/i2c-1", 0x68);
     MPUHandler mpuHandler([&](AppEvent e) {
@@ -116,6 +118,7 @@ int main() {
         return 1;
     }
 
+    speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
     voiceCtrl.start();
 
     std::cout << "[Main] initial done, time mode, waiting for events..." << std::endl;
@@ -129,6 +132,5 @@ int main() {
     }
 
     voiceCtrl.stop();
-    return 0;
     return 0;
 }

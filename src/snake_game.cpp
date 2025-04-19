@@ -1,3 +1,4 @@
+
 #include "snake_game.h"
 #include <termios.h>
 #include <unistd.h>
@@ -63,11 +64,13 @@ void SnakeGame::generateApple() {
 
 void SnakeGame::setDirection(Direction d) {
     std::lock_guard<std::mutex> lock(directionMutex);
+    // std::cout << "[SnakeGame] setDirection called: " << d << std::endl;
     // don't move to ass
     if ((currentDirection == UP && d == DOWN) ||
         (currentDirection == DOWN && d == UP) ||
         (currentDirection == LEFT && d == RIGHT) ||
         (currentDirection == RIGHT && d == LEFT)) {
+        std::cout << "[SnakeGame] Opposite direction blocked\n";
         return;
     }
     currentDirection = d;
@@ -80,6 +83,7 @@ void SnakeGame::start(){
 
 void SnakeGame::run() {
     // bool running = true;
+
 
     // setNonBlockingRawInput();
     srand(time(0));
@@ -101,6 +105,8 @@ void SnakeGame::run() {
         // if (n == 1 && buf[0] == 'q') {
         //         break;
         // }
+        // std::cout << "[SnakeGame] Tick using direction: " << currentDirection << std::endl;
+
         Direction dir;
         {
             std::lock_guard<std::mutex> lock(directionMutex);
@@ -155,4 +161,3 @@ void SnakeGame::stop() {
         gameThread.join();
     }
 }
-

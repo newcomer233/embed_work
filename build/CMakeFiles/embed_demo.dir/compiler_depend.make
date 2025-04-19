@@ -2748,7 +2748,42 @@ CMakeFiles/embed_demo.dir/src/SpeechCtrl.cpp.o: /home/newcomer233/Desktop/embed_
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/regex \
+  /usr/include/c++/12/bitset \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/stack \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/bits/stl_stack.h \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/regex_constants.h \
+  /usr/include/c++/12/bits/regex_error.h \
+  /usr/include/c++/12/bits/regex_automaton.h \
+  /usr/include/c++/12/bits/regex_automaton.tcc \
+  /usr/include/c++/12/bits/regex_scanner.h \
+  /usr/include/c++/12/bits/regex_scanner.tcc \
+  /usr/include/c++/12/bits/regex_compiler.h \
+  /usr/include/c++/12/bits/regex_compiler.tcc \
+  /usr/include/c++/12/bits/regex.h \
+  /usr/include/c++/12/bits/regex.tcc \
+  /usr/include/c++/12/bits/regex_executor.h \
+  /usr/include/c++/12/bits/regex_executor.tcc
 
 CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/SpeechRecognizer.cpp \
   /usr/include/stdc-predef.h \
@@ -4423,8 +4458,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/jsoncpp/json/writer.h:
 
-/usr/include/c++/12/bits/stl_deque.h:
-
 /usr/include/jsoncpp/json/value.h:
 
 /usr/include/jsoncpp/json/version.h:
@@ -4447,8 +4480,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/aarch64-linux-gnu/curl/system.h:
 
-/usr/include/aarch64-linux-gnu/curl/curlver.h:
-
 /usr/include/aarch64-linux-gnu/curl/curl.h:
 
 /home/newcomer233/Desktop/embed_work-main/src/weather.cpp:
@@ -4456,8 +4487,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/aarch64-linux-gnu/bits/termios-c_lflag.h:
 
 /usr/include/aarch64-linux-gnu/bits/termios-c_cflag.h:
-
-/usr/include/aarch64-linux-gnu/bits/termios-baud.h:
 
 /usr/include/aarch64-linux-gnu/bits/termios-c_oflag.h:
 
@@ -4481,10 +4510,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/pattern_formatter-inl.h:
 
-/usr/include/c++/12/bits/stl_stack.h:
-
-/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger-inl.h:
-
 /usr/include/aarch64-linux-gnu/sys/socket.h:
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/backtracer-inl.h:
@@ -4506,8 +4531,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/periodic_worker-inl.h:
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/periodic_worker.h:
-
-/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/registry.h:
 
 /usr/include/aarch64-linux-gnu/bits/xopen_lim.h:
 
@@ -4532,6 +4555,38 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/src/WeatherWrapper.cpp:
 
 /home/newcomer233/Desktop/embed_work-main/src/SpeechRecognizer.cpp:
+
+/usr/include/c++/12/bits/regex_executor.h:
+
+/usr/include/c++/12/bits/regex.h:
+
+/usr/include/c++/12/bits/regex_compiler.tcc:
+
+/usr/include/c++/12/bits/regex_scanner.tcc:
+
+/usr/include/aarch64-linux-gnu/curl/curlver.h:
+
+/usr/include/c++/12/bits/regex_scanner.h:
+
+/usr/include/aarch64-linux-gnu/bits/termios-baud.h:
+
+/usr/include/c++/12/bits/regex_automaton.tcc:
+
+/usr/include/c++/12/bits/regex_automaton.h:
+
+/usr/include/c++/12/bits/regex_error.h:
+
+/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/details/registry.h:
+
+/usr/include/c++/12/bits/regex_constants.h:
+
+/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger-inl.h:
+
+/usr/include/c++/12/bits/stl_stack.h:
+
+/usr/include/c++/12/bits/stl_deque.h:
+
+/usr/include/c++/12/bitset:
 
 /home/newcomer233/Desktop/embed_work-main/include/keywords.h:
 
@@ -4815,6 +4870,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/c++/12/regex:
+
 /usr/include/c++/12/bits/gslice.h:
 
 /usr/include/c++/12/pstl/glue_algorithm_defs.h:
@@ -4972,6 +5029,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/version.h:
 
 /usr/include/c++/12/bits/std_function.h:
+
+/usr/include/c++/12/bits/regex_executor.tcc:
 
 /usr/include/c++/12/bits/deque.tcc:
 
@@ -5169,6 +5228,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/debug/debug.h:
 
+/usr/include/c++/12/bits/regex.tcc:
+
 /usr/include/c++/12/bits/std_thread.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
@@ -5268,6 +5329,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/pthread.h:
 
 /usr/include/aarch64-linux-gnu/bits/sched.h:
+
+/usr/include/c++/12/bits/regex_compiler.h:
 
 /usr/include/c++/12/system_error:
 

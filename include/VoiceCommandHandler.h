@@ -16,17 +16,33 @@ public:
     using EventCallback = std::function<void(AppEvent)>;
 
     VoiceCommandHandler(SnakeGame& snakeRef, AppController& appRef,
-                        PiperSynthesizer& synth, const std::string& apiKey,
+                        PiperSynthesizer& synth,AppStateManager& stateManager ,const std::string& apiKey,
                         const std::string& city, EventCallback cb)
-        : snake(snakeRef), app(appRef), synth(synth), weather(apiKey, city),
+        : snake(snakeRef), app(appRef), synth(synth), stateManager(stateManager),weather(apiKey, city),
           eventCallback(cb), speechCtrl("../model") {
 
         using namespace std::placeholders;
 
-        speechCtrl.setOnUp([&]() { if (currentState == AppState::GAME) snake.setDirection(Direction::DOWN); });
-        speechCtrl.setOnDown([&]() { if (currentState == AppState::GAME) snake.setDirection(Direction::UP); });
-        speechCtrl.setOnLeft([&]() { if (currentState == AppState::GAME) snake.setDirection(Direction::RIGHT); });
-        speechCtrl.setOnRight([&]() { if (currentState == AppState::GAME) snake.setDirection(Direction::LEFT); });
+        speechCtrl.setOnUp([&]() { 
+            if (stateManager.getState() == AppState::GAME)
+                snake.setDirection(Direction::DOWN); 
+            std::cout << "[SpeechCtrl] Triggering UP\n";
+        });
+        speechCtrl.setOnDown([&]() { 
+            if (stateManager.getState() == AppState::GAME)
+                snake.setDirection(Direction::UP); 
+            std::cout << "[SpeechCtrl] Triggering DOWN\n";
+        });
+        speechCtrl.setOnLeft([&]() { 
+            if (stateManager.getState() == AppState::GAME)
+                snake.setDirection(Direction::RIGHT); 
+            std::cout << "[SpeechCtrl] Triggering LEFT\n";
+        });
+        speechCtrl.setOnRight([&]() { 
+            if (stateManager.getState() == AppState::GAME)
+                snake.setDirection(Direction::LEFT); 
+            std::cout << "[SpeechCtrl] Triggering RIGHT\n";
+        });
 
         speechCtrl.setResultCallback(std::bind(&VoiceCommandHandler::onVoiceResult, this, _1));
     }
@@ -53,6 +69,8 @@ private:
     SpeechCtrl speechCtrl;
     EventCallback eventCallback;
     AppState currentState = AppState::TIME;
+    AppStateManager& stateManager;
+
     bool waitingForDigits = false;
     std::string outputPath = "../output.wav";
 

@@ -33,7 +33,7 @@ void PiperSynthesizer::synthesizeTextToFile(const std::string& text, const std::
     if (check.tellg() < 10000) {
         std::cerr << "ERROR: Output file is too small." << std::endl;
     } else {
-        std::cout << "✅ Synthesis OK. Output: " << outPath << std::endl;
+        std::cout << "Synthesis OK. Output: " << outPath << std::endl;
     }
 }
 

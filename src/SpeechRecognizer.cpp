@@ -43,6 +43,10 @@ void SpeechRecognizer::stop() {
         worker.join();
 }
 
+void SpeechRecognizer::setInitialGrammar(const std::vector<std::string>& commands) {
+    initialGrammar = commands;
+}
+
 void SpeechRecognizer::recognizeLoop() {
 
     if (!model) {
@@ -51,10 +55,25 @@ void SpeechRecognizer::recognizeLoop() {
     }
 
     recognizer = vosk_recognizer_new(model, sampleRate);
-
+    
     if (!recognizer) {
         std::cerr << "Failed to create recognizer" << std::endl;
         return;
+    }
+    vosk_recognizer_set_words(recognizer, 5);
+
+    if (!initialGrammar.empty()) {
+        std::ostringstream oss;
+        oss << "[";
+        for (size_t i = 0; i < initialGrammar.size(); ++i) {
+            oss << "\"" << initialGrammar[i] << "\"";
+            if (i != initialGrammar.size() - 1)
+                oss << ", ";
+        }
+        oss << "]";
+        std::string grammarJson = oss.str();
+        vosk_recognizer_set_grm(recognizer, grammarJson.c_str());
+        std::cout << "[SpeechRecognizer] Initial grammar: " << grammarJson << std::endl;
     }
 
     FILE* pipe = popen("arecord -q -f S16_LE -r 16000 -c 1", "r");

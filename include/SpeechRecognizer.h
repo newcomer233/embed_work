@@ -16,6 +16,7 @@ public:
     void start();  // start
     void stop();   // stop
 
+    void setInitialGrammar(const std::vector<std::string>& commands);
     void setGrammar(const std::vector<std::string>& commands);
 private:
     void recognizeLoop();  // main threads
@@ -29,6 +30,7 @@ private:
 
     std::thread worker;
     std::atomic<bool> running;
+    std::vector<std::string> initialGrammar;
 };
 
 #endif // SPEECH_RECOGNIZER_H

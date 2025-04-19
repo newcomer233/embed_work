@@ -2,6 +2,7 @@
 #include "keywords.h" 
 #include <iostream>
 #include <mutex>
+#include <regex>
 
 SpeechCtrl::SpeechCtrl(const std::string& modelPath)
     : modelPath(modelPath), running(false), recognizer(nullptr) {}
@@ -73,17 +74,23 @@ void SpeechCtrl::setResultCallback(std::function<void(const std::string&)> cb) {
 
 void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
     std::lock_guard<std::mutex> lock(commandMutex);
+    std::vector<std::string> updatedCmdList = cmdList;
 
-    if (!recognizer) {
-        std::cerr << "[SpeechCtrl] recognizer not initialized, skipping setCommandSet()\n";
-        return;
+    // automatically add [unk]
+    if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
+        updatedCmdList.push_back("[unk]");
     }
 
-    if (cmdList == currentCommandSet) {
+    if (updatedCmdList == currentCommandSet) {
         std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
         return;
     }
 
-    currentCommandSet = cmdList;
-    recognizer->setGrammar(cmdList);
+    currentCommandSet = updatedCmdList;
+
+    if (recognizer) {
+        recognizer->setGrammar(currentCommandSet);
+    } else {
+        std::cout << "[SpeechCtrl] recognizer not started yet, command set will be applied on start()." << std::endl;
+    }
 }

@@ -65,11 +65,19 @@ bool Paj7260U2::deviceInit() {
 
     for (const auto& reg : init_regs) {
         uint8_t buf[2] = {reg.reg, reg.val};
-        if (write(i2c_fd_, buf, 2) != 2) {
+        bool success = false;
+        for (int i = 0; i < 3; ++i) {
+            if (write(i2c_fd_, buf, 2) == 2) {
+                success = true;
+                break;
+            }
+            usleep(2000); // 2ms delay
+        }
+        if (!success) {
             std::cerr << "fail to initial: 0x" << std::hex << int(reg.reg) << std::endl;
             return false;
         }
-        usleep(1000); // delay for stable
+        usleep(1000);
     }
 
     // switch to bank1 : start
