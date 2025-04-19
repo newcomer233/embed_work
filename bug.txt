@@ -1,6 +1,6 @@
 请输入天气和温度（如 s12 / r-5）...
 [SpeechCtrl] Command set unchanged, skipping update.
-✅ Synthesis OK. Output: ../output.wav
+ Synthesis OK. Output: ../output.wav
 Playing WAVE '../output.wav' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
 Current Weather:
 Date: 2025-04-18
