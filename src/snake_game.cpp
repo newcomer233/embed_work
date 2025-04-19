@@ -75,6 +75,8 @@ void SnakeGame::setDirection(Direction d) {
     }
     currentDirection = d;
 }
+
+
 void SnakeGame::start(){
     if(running) return;
     running = true;
@@ -88,7 +90,7 @@ void SnakeGame::run() {
     // setNonBlockingRawInput();
     srand(time(0));
     generateApple();
-
+    
     while (running) {
         // char buf[3];
         // int n = read(STDIN_FILENO, buf, sizeof(buf));
@@ -115,7 +117,7 @@ void SnakeGame::run() {
         if (!running) break; 
 
 
-        if (frameCount % 2 == 0) {
+        if (frameCount % 3 == 0) {
             snake.setDirection(dir);
             snake.move();
             if (snake.checkCollision()) break;
@@ -136,7 +138,7 @@ void SnakeGame::run() {
         frameCount++;
         std::this_thread::sleep_for(std::chrono::milliseconds(125));
     }
-
+    // when game over it will blink
     for (int i = 0; i < 3; ++i) {
         display.clear();
         for (auto &p : snake.getBody())
@@ -155,9 +157,20 @@ void SnakeGame::run() {
     std::cout << "Game Over" << std::endl;
 }
 
+void SnakeGame::reset() {
+    snake = Snake(width, height);   
+    frameCount = 0;                 
+    flash = true;                  
+    currentDirection = RIGHT;       
+    generateApple();                
+}
+
 void SnakeGame::stop() {
     running = false;
+    reset();
+    
     if(gameThread.joinable()){
         gameThread.join();
     }
+    
 }

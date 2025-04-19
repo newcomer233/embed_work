@@ -17,6 +17,7 @@
 #include "GestureHandler_Event.h"
 #include "VoiceCommandHandler.h"
 #include "AppStateMachine.h"
+#include <unistd.h>
     
 
 
@@ -47,7 +48,7 @@ int main() {
 
     stateManager.onEnter(AppState::TIME, [&]() {
         app.handleCommand("time");
-        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
+        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch","[unk]"});
         synth.synthesizeTextToFile("time mode", outputPath);
         synth.playAudioFile(outputPath);
     });
@@ -57,7 +58,7 @@ int main() {
     stateManager.onEnter(AppState::GAME, [&]() {
         snake.start();
         speechCtrl.setCommandSet({"up", "down", "left", "right",
-            "time", "game", "counter", "weather", "mode", "switch"});
+            "time", "game", "counter", "weather", "mode", "switch","[unk]"});
         synth.synthesizeTextToFile("game mode", outputPath);
         synth.playAudioFile(outputPath);
     });
@@ -86,7 +87,7 @@ int main() {
     });
     stateManager.onEnter(AppState::WEATHER, [&]() {
         app.handleCommand("temp");
-        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
+        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch","[unk]"});
         synth.synthesizeTextToFile("weather mode", outputPath);
         synth.playAudioFile(outputPath);
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -117,11 +118,11 @@ int main() {
         std::cerr << "[Main] sensor init fail" << std::endl;
         return 1;
     }
-
-    speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
+    speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch", "[unk]"});
     voiceCtrl.start();
 
     std::cout << "[Main] initial done, time mode, waiting for events..." << std::endl;
+    
     std::string input;
     while (std::getline(std::cin, input)) {
         if (input == "quit") break;

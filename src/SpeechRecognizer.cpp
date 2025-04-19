@@ -29,6 +29,9 @@ SpeechRecognizer::~SpeechRecognizer() {
 void SpeechRecognizer::setCallback(std::function<void(const std::string&)> cb) {
     callback = cb;
 }
+void SpeechRecognizer::setPartialCallback(std::function<void(const std::string&)> cb) {
+    partialCallback = cb;
+}
 
 void SpeechRecognizer::start() {
     if (running) return;
@@ -91,8 +94,10 @@ void SpeechRecognizer::recognizeLoop() {
             if (vosk_recognizer_accept_waveform(recognizer, buffer, nread)) {
                 const char* result = vosk_recognizer_result(recognizer);
                 if (callback) callback(result);
-            } else {
-                // const char* partial = vosk_recognizer_partial_result(recognizer);
+            } else{
+                const char* partial = vosk_recognizer_partial_result(recognizer);
+                if (partialCallback) partialCallback(partial);
+                std::cout << "[SpeechRecognizer] Partial: " << partial << std::endl;
             }
         }
     }
@@ -106,6 +111,7 @@ void SpeechRecognizer::recognizeLoop() {
 }
 
 void SpeechRecognizer::setGrammar(const std::vector<std::string>& commands) {
+    std::lock_guard<std::mutex> lock(recognizerMutex);
     if (!recognizer) {
         std::cerr << "[SpeechRecognizer] recognizer is null, skip setGrammar()\n";
         return;

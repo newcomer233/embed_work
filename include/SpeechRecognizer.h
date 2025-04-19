@@ -6,6 +6,7 @@
 #include <thread>
 #include <atomic>
 #include "vosk_api.h"
+#include <mutex>
 
 class SpeechRecognizer {
 public:
@@ -13,6 +14,7 @@ public:
     ~SpeechRecognizer();
 
     void setCallback(std::function<void(const std::string&)> cb);
+    void setPartialCallback(std::function<void(const std::string&)> cb);
     void start();  // start
     void stop();   // stop
 
@@ -26,11 +28,14 @@ private:
 
     std::string modelPath;
     float sampleRate;
+    
     std::function<void(const std::string&)> callback;
+    std::function<void(const std::string&)> partialCallback;
 
     std::thread worker;
     std::atomic<bool> running;
     std::vector<std::string> initialGrammar;
+    std::mutex recognizerMutex;
 };
 
 #endif // SPEECH_RECOGNIZER_H

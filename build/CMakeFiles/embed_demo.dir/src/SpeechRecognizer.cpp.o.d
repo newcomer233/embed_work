@@ -158,21 +158,23 @@ CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
- /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
- /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/exception \
+ /usr/include/c++/12/mutex /usr/include/c++/12/exception \
  /usr/include/c++/12/bits/exception_ptr.h \
  /usr/include/c++/12/bits/cxxabi_init_exception.h \
  /usr/include/c++/12/bits/nested_exception.h \
- /usr/include/c++/12/bits/ios_base.h /usr/include/c++/12/ext/atomicity.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
- /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/12/bits/locale_classes.h \
- /usr/include/c++/12/bits/locale_classes.tcc \
  /usr/include/c++/12/system_error \
  /usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h \
- /usr/include/c++/12/stdexcept /usr/include/c++/12/streambuf \
- /usr/include/c++/12/bits/streambuf.tcc \
+ /usr/include/c++/12/stdexcept /usr/include/c++/12/bits/std_mutex.h \
+ /usr/include/c++/12/bits/unique_lock.h \
+ /usr/include/c++/12/ext/atomicity.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+ /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
+ /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+ /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/bits/ios_base.h \
+ /usr/include/c++/12/bits/locale_classes.h \
+ /usr/include/c++/12/bits/locale_classes.tcc \
+ /usr/include/c++/12/streambuf /usr/include/c++/12/bits/streambuf.tcc \
  /usr/include/c++/12/bits/basic_ios.h \
  /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
  /usr/include/wctype.h /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h \

@@ -154,7 +154,21 @@ CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: \
  /usr/include/c++/12/ext/atomicity.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
  /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
- /usr/include/termios.h /usr/include/aarch64-linux-gnu/bits/termios.h \
+ /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
+ /usr/include/c++/12/unordered_map \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/hashtable.h \
+ /usr/include/c++/12/bits/hashtable_policy.h \
+ /usr/include/c++/12/bits/enable_special_members.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/array \
+ /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/algorithmfwd.h \
+ /usr/include/c++/12/bits/stl_heap.h \
+ /usr/include/c++/12/bits/stl_tempbuf.h \
+ /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/termios.h \
+ /usr/include/aarch64-linux-gnu/bits/termios.h \
  /usr/include/aarch64-linux-gnu/bits/termios-struct.h \
  /usr/include/aarch64-linux-gnu/bits/termios-c_cc.h \
  /usr/include/aarch64-linux-gnu/bits/termios-c_iflag.h \

@@ -816,7 +816,15 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_
   /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
   /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
   /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
-  /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h
+  /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h \
+  /usr/include/unistd.h \
+  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+  /usr/include/aarch64-linux-gnu/bits/environments.h \
+  /usr/include/aarch64-linux-gnu/bits/confname.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h
 
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp \
   /usr/include/stdc-predef.h \
@@ -4110,6 +4118,23 @@ CMakeFiles/embed_demo.dir/src/snake_game.cpp.o: /home/newcomer233/Desktop/embed_
   /usr/include/c++/12/ext/atomicity.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
   /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
   /usr/include/termios.h \
   /usr/include/aarch64-linux-gnu/bits/termios.h \
   /usr/include/aarch64-linux-gnu/bits/termios-struct.h \
@@ -4594,18 +4619,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /home/newcomer233/Desktop/embed_work-main/src/PiperSynthesizer.cpp:
 
-/usr/include/aarch64-linux-gnu/bits/unistd_ext.h:
-
-/home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp:
-
-/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/unistd.h:
-
 /usr/include/linux/spi/spi.h:
 
 /usr/include/linux/ioctl.h:
@@ -4629,6 +4642,18 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/stack:
 
 /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp:
+
+/usr/include/aarch64-linux-gnu/bits/unistd_ext.h:
+
+/home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp:
+
+/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/unistd.h:
 
 /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h:
 

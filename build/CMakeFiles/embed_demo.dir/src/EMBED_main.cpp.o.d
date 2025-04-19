@@ -297,4 +297,11 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: \
  /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
  /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
  /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
- /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h
+ /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h \
+ /usr/include/unistd.h /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+ /usr/include/aarch64-linux-gnu/bits/environments.h \
+ /usr/include/aarch64-linux-gnu/bits/confname.h \
+ /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+ /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h

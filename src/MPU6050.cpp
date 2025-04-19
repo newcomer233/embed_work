@@ -61,8 +61,8 @@ bool MPU6050::deviceInit() {
         {REG_PWR_MGMT_1, 0x00},       // 唤醒
         {REG_INT_ENABLE, 0x40},       // 启用 Motion 中断（bit 6）
         {REG_INT_PIN_CFG, 0xB0},      // 中断引脚配置：低电平有效，推挽输出
-        {REG_MOT_THR, 10},            // Motion Threshold（可调）
-        {REG_MOT_DUR, 10},            // Motion Duration（可调）
+        {REG_MOT_THR, 4},            // Motion Threshold（可调）
+        {REG_MOT_DUR, 7},            // Motion Duration（可调）
         {REG_MOT_DETECT_CTRL, 0x15},  // 加速器 LPF，运动检测控制
         {REG_ACCEL_CONFIG, 0x20},     // 设置高通滤波器用于运动检测
     };

@@ -33,14 +33,41 @@ void SpeechCtrl::start() {
                 // RAW DATA
                 if (onRawText) onRawText(text);
 
-                    // MATCHING ACTION
+                    // // MATCHING ACTION
+                    // for (const auto& [key, action] : keywordMap) {
+                    //     if (text.find(key) != std::string::npos) {
+                    //         if (action == "UP" && onUp) onUp();
+                    //         else if (action == "DOWN" && onDown) onDown();
+                    //         else if (action == "LEFT" && onLeft) onLeft();
+                    //         else if (action == "RIGHT" && onRight) onRight();
+                    //         else if (action == "MODE" && onModeSwitch) onModeSwitch();
+                    //         break;
+                    //     }
+                    // }
+                }
+            }
+        }
+    });
+
+    recognizer->setPartialCallback([this](const std::string& partialJson) {
+        std::cout << "[SpeechCtrl] Partial: " << partialJson << std::endl;
+    
+        auto partialStart = partialJson.find("partial");
+        if (partialStart != std::string::npos) {
+            auto colonPos = partialJson.find(":", partialStart);
+            if (colonPos != std::string::npos) {
+                auto quoteStart = partialJson.find("\"", colonPos + 1);
+                auto quoteEnd = partialJson.find("\"", quoteStart + 1);
+                if (quoteStart != std::string::npos && quoteEnd != std::string::npos) {
+                    std::string partialText = partialJson.substr(quoteStart + 1, quoteEnd - quoteStart - 1);
+    
+                    // 匹配方向
                     for (const auto& [key, action] : keywordMap) {
-                        if (text.find(key) != std::string::npos) {
+                        if (partialText.find(key) != std::string::npos) {
                             if (action == "UP" && onUp) onUp();
                             else if (action == "DOWN" && onDown) onDown();
                             else if (action == "LEFT" && onLeft) onLeft();
                             else if (action == "RIGHT" && onRight) onRight();
-                            else if (action == "MODE" && onModeSwitch) onModeSwitch();
                             break;
                         }
                     }
@@ -48,9 +75,12 @@ void SpeechCtrl::start() {
             }
         }
     });
+
     listenThread = std::thread([this]() {
         recognizer->start();
-        while (running);
+        while (running) {
+             std::this_thread::sleep_for(std::chrono::milliseconds(50)); // 减少空跑
+        }
         recognizer->stop();
     });
 }
@@ -77,14 +107,14 @@ void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
     std::vector<std::string> updatedCmdList = cmdList;
 
     // automatically add [unk]
-    if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
-        updatedCmdList.push_back("[unk]");
-    }
+    // if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
+    //     updatedCmdList.push_back("[unk]");
+    // }
 
-    if (updatedCmdList == currentCommandSet) {
-        std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
-        return;
-    }
+    // if (updatedCmdList == currentCommandSet) {
+    //     std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
+    //     return;
+    // }
 
     currentCommandSet = updatedCmdList;
 

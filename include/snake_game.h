@@ -6,15 +6,17 @@
 #include "thread"
 #include <atomic>
 #include <mutex>
+#include <functional> 
 
 class SnakeGame {
 public:
     SnakeGame(int width, int height, MAX7219& disp);
     ~SnakeGame();
-    // void run();
+
     void start();
     void setDirection(Direction d); 
     void stop(); 
+
 
 private:
     int width, height;
@@ -32,7 +34,8 @@ private:
     void restoreInput();
     void generateApple();
     bool isOccupied(int x, int y) const;
-
+    void reset();
+    
     std::atomic<bool> running = true; // running status
     std::mutex directionMutex;
 };
