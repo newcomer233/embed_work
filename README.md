@@ -105,8 +105,35 @@ Activate modes and features using the following voice commands:
 - `CLK` → GPIO 11 (SPI SCLK)  
 - `CS`  → GPIO 8 (SPI CE0)
 
+## 4. Software Requirements
 
-## 4. Division of Labour
+The following tools, libraries, and components are required to build and run PiGrid.  
+All dependencies are installed automatically via the provided Dockerfile.  
+Alternatively, they can be installed manually as listed below:
+
+###  Build Tools
+
+- `g++` – GNU C++ compiler  
+- `cmake` – Cross-platform build system generator
+
+###  System Libraries (via APT)
+
+- `libgpiod-dev` – For GPIO event handling (used by PAJ7620U2 and MPU6050)
+- `libcurl4-openssl-dev` – Used for fetching live weather data via OpenWeather API
+- `libjsoncpp-dev` – Used for parsing OpenWeather API JSON responses
+- `espeak-ng` – Lightweight speech synthesis backend (for voice response)
+
+Install them manually (if needed):
+
+```bash
+sudo apt update
+sudo apt install g++ cmake libgpiod-dev libcurl4-openssl-dev libjsoncpp-dev espeak-ng
+```
+some times, directly pull from this project may cause the onnxruntime or piper-phonemize_linux_aarch64 broken,
+there is a zip file in the lib.
+or can download from offical website or Piper project.
+
+## 5. Division of Labour
 
 **Zehua Xu:** Project Integration, Sensor Interfacing & Debugging  
 **Huinan Guo:** Weather API Integration & Data Processing  
