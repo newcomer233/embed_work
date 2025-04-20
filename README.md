@@ -43,7 +43,6 @@ Activate modes and features using the following voice commands:
 *   **PAJ7620U2** Gesture Recognition Sensor Module x 1
 *   **MPU6050** Gyroscope/Accelerometer Module x 1
 *   **Bluetooth Earphone/Headset with Microphone** x 1 
-*   **Jumper Wires** x  
 
 ###  Wiring Overview
 
@@ -104,7 +103,7 @@ Install them manually (if needed):
 sudo apt update
 sudo apt install g++ cmake libgpiod-dev libcurl4-openssl-dev libjsoncpp-dev espeak-ng
 ```
-We utilize the following open-source projects in our system:
+Following open-source projects were used in our system, allowing performimg real-time local speech recognition and synthesis without relying on cloud services:
 
 VOSK - A lightweight and accurate offline speech recognition toolkit.
   https://github.com/alphacep/vosk-api
@@ -112,11 +111,8 @@ VOSK - A lightweight and accurate offline speech recognition toolkit.
 Piper - A fast and high-quality neural text-to-speech (TTS) system optimized for local execution, especially on embedded devices like the Raspberry Pi.
   https://github.com/rhasspy/piper
 
-These components enable our system to perform real-time, local speech recognition and synthesis without relying on cloud services.
-
-some times, directly pull from this project may cause the onnxruntime or piper-phonemize_linux_aarch64 broken,
-there is a zip file in the lib.
-or can download from offical website or Piper project.
+Sometimes, directly pulling from this project may cause issues with onnxruntime or piper-phonemize_linux_aarch64, potentially leaving them broken. A .zip file containing these libraries is provided in the lib/ directory.   
+Also, you can download them from the official ONNX Runtime website or the Piper project.
 
 ## 5. Division of Labour
 
