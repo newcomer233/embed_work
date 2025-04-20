@@ -64,7 +64,6 @@ Activate modes and features using the following voice commands:
 ## 3. Hardware Requirements
 
 *   **Raspberry Pi 5** (4GB/8GB RAM) x 1
-*   **Micro SD card** (16GB+ recommended) x 1
 *   **MAX7219** 8x8 LED Dot Matrix Module x 2 
 *   **PAJ7620U2** Gesture Recognition Sensor Module x 1
 *   **MPU6050** Gyroscope/Accelerometer Module x 1
