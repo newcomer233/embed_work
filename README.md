@@ -92,11 +92,11 @@ Activate modes and features using the following voice commands:
 ####  PAJ7620U2 (I2C-3)
 - `VCC` → 3.3V / 5V  
 - `GND` → GND  
-- `SCL` → I2C-3 SCL （需设备树启用）  
+- `SCL` → I2C-3 SCL 
 - `SDA` → I2C-3 SDA  
 - `INT` → GPIO 12  
 
-> ⚠ I2C-3 is not enabled by default on Raspberry Pi. You may need to configure it using a device tree overlay or software I2C.
+> I2C-3 is not enabled by default on Raspberry Pi. You may need to configure it using a device tree overlay or software I2C.
 
 ####  MAX7219 (SPI0.0)
 - `VCC` → 5V  
