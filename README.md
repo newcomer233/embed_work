@@ -70,7 +70,41 @@ Activate modes and features using the following voice commands:
 *   **Bluetooth Earphone/Headset with Microphone** x 1 
 *   **Jumper Wires** x  
 
-*(wiring diagram)*
+###  Wiring Overview
+
+| Device        | Interface | RPi Bus/Pin                | Note                                  |
+|---------------|-----------|-----------------------------|---------------------------------------|
+| **MPU6050**   | I2C       | `I2C-1` (`/dev/i2c-1`)      | Address `0x68`, INT → GPIO 13         |
+| **PAJ7620U2** | I2C       | `I2C-3` (`/dev/i2c-3`)      | Address `0x73`, INT → GPIO 12         |
+| **MAX7219**   | SPI       | `SPI0.0` (`/dev/spidev0.0`) | MOSI: GPIO 10, CLK: GPIO 11, CS: GPIO 8 |
+
+---
+
+###  Wiring Details
+
+####  MPU6050 (I2C-1)
+- `VCC` → 3.3V / 5V  
+- `GND` → GND  
+- `SCL` → GPIO 3 (I2C-1 SCL)  
+- `SDA` → GPIO 2 (I2C-1 SDA)  
+- `INT` → GPIO 13  
+
+####  PAJ7620U2 (I2C-3)
+- `VCC` → 3.3V / 5V  
+- `GND` → GND  
+- `SCL` → I2C-3 SCL （需设备树启用）  
+- `SDA` → I2C-3 SDA  
+- `INT` → GPIO 12  
+
+> ⚠ I2C-3 is not enabled by default on Raspberry Pi. You may need to configure it using a device tree overlay or software I2C.
+
+####  MAX7219 (SPI0.0)
+- `VCC` → 5V  
+- `GND` → GND  
+- `DIN` → GPIO 10 (SPI MOSI)  
+- `CLK` → GPIO 11 (SPI SCLK)  
+- `CS`  → GPIO 8 (SPI CE0)
+
 
 ## 4. Division of Labour
 
