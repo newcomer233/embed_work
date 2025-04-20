@@ -25,6 +25,61 @@ Piper - A fast and high-quality neural text-to-speech (TTS) system optimized for
 
 These components enable our system to perform real-time, local speech recognition and synthesis without relying on cloud services.
 
+# PiGrid: Voice & Gesture Controlled Real-Time Smart Display
 
+## 1. Introduction
+
+PiGrid is an interactive, pixel-style smart display built on Raspberry Pi 5 and driven by MAX7219 LED matrices. As a project for the Real Time Embedded Programming course (ENG5220), this device features time/weather display, timer, and snake game, with control based on voice input via bluetooth microphone and gesture recognition using PAJ7620u2 and MPU6050. With its combination of display, sensors, and processing capabilities, PiGrid could be extended into various smart home roles, such as a personalized status display, notification center, or even a simple controller.
+
+## 2. Demo & Usage
+
+**Demo Video:** [https://www.youtube.com/watch?v=_KGyjrOgzdA](https://www.youtube.com/watch?v=_KGyjrOgzdA)
+
+PiGrid boots up automatically when powered on, starting with the Time display. Here's how to interact with its different modes:
+
+### Mode Switching 
+
+**Action:** Tap the **MPU6050** sensor module.  
+**Result:** Cycles through the available modes sequentially (e.g., Time -> Game -> Counter -> Weather -> Time...).  
+
+### Modes & Voice Commands
+
+Activate modes and features using the following voice commands:  
+
+*   **Command:** "time"  
+**Action:** Switches to the **Time Display** mode, showing the current time.   
+
+*   **Command:** "counter"   
+**Action:** Switches to **Countdown Timer** mode (display likely prompts for input).  
+**Controls:** Say four digits (e.g., "one two three four") to set the duration (interpreted as 12 minutes and 34 seconds) and start the countdown automatically.  
+
+*   **Command:** "weather"  
+**Action:** Switches to **Weather Display** mode.    
+**Details:** Shows the current weather conditions (icon) and temperature (°C) based on data fetched from **OpenWeather**.  
+
+*   **Command:** "game"  
+**Action:** Launches the **Snake Game**.    
+**Controls:** Use voice commands ("up", "down", "left", "right") **or** swipe your hand (up, down, left, right) across the **PAJ7620U2** sensor to control the snake's direction.  
+
+## 3. Hardware Requirements
+
+*   **Raspberry Pi 5** (4GB/8GB RAM) x 1
+*   **Micro SD card** (16GB+ recommended) x 1
+*   **MAX7219** 8x8 LED Dot Matrix Module x 2 
+*   **PAJ7620U2** Gesture Recognition Sensor Module x 1
+*   **MPU6050** Gyroscope/Accelerometer Module x 1
+*   **Bluetooth Earphone/Headset with Microphone** x 1 
+*   **Jumper Wires** x  
+
+*(wiring diagram)*
+
+## 4. Division of Labour
+
+**Zehua Xu:** Project Integration, Sensor Interfacing & Debugging  
+**Huinan Guo:** Weather API Integration & Data Processing  
+**Keji Lu:** Voice Recognition Module Implementation  
+**Linfeng Zhang:** Visual Design, Display Implementation, PR  
+**Mengxiang Duan:** System Interaction Logic Design  
+**Jinhao Xu:** Hardware Modification, Assembly, and Exterior Design
 
 
