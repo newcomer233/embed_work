@@ -107,14 +107,14 @@ void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
     std::vector<std::string> updatedCmdList = cmdList;
 
     // automatically add [unk]
-    // if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
-    //     updatedCmdList.push_back("[unk]");
-    // }
+    if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
+        updatedCmdList.push_back("[unk]");
+    }
 
-    // if (updatedCmdList == currentCommandSet) {
-    //     std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
-    //     return;
-    // }
+    if (updatedCmdList == currentCommandSet) {
+        std::cout << "[SpeechCtrl] Command set unchanged, skipping update." << std::endl;
+        return;
+    }
 
     currentCommandSet = updatedCmdList;
 
@@ -122,5 +122,23 @@ void SpeechCtrl::setCommandSet(const std::vector<std::string>& cmdList) {
         recognizer->setGrammar(currentCommandSet);
     } else {
         std::cout << "[SpeechCtrl] recognizer not started yet, command set will be applied on start()." << std::endl;
+    }
+}
+
+void SpeechCtrl::setInitialset(const std::vector<std::string>& cmdList) {
+    std::lock_guard<std::mutex> lock(setInitalMutex);
+    std::vector<std::string> updatedCmdList = cmdList;
+
+    // automatically add [unk]
+    if (std::find(updatedCmdList.begin(), updatedCmdList.end(), "[unk]") == updatedCmdList.end()) {
+        updatedCmdList.push_back("[unk]");
+    }
+
+
+    if (recognizer) {
+        recognizer->setInitialGrammar(updatedCmdList);
+        std::cout << "[SpeechCtrl] inital recognizer applied " << std::endl;
+    } else {
+        std::cout << "[SpeechCtrl] initial recognizer not started yet" << std::endl;
     }
 }

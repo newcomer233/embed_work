@@ -23,6 +23,7 @@ public:
 
     void setResultCallback(std::function<void(const std::string&)> cb);
     void setCommandSet(const std::vector<std::string>& commands);
+    void setInitialset(const std::vector<std::string>& commands);
 private:
     void listenLoop();
 
@@ -42,4 +43,5 @@ private:
     std::vector<std::string> currentCommandSet;
 
     std::mutex commandMutex;
+    std::mutex setInitalMutex;
 };

@@ -3,6 +3,11 @@
 #include <string>
 #include <thread>
 #include <chrono>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
+#include <unistd.h>
+
 #include "MAX7219.h"
 #include "app_controller.h"
 #include "snake_game.h"
@@ -18,8 +23,25 @@
 #include "VoiceCommandHandler.h"
 #include "AppStateMachine.h"
 #include <unistd.h>
-    
 
+//event quee
+std::queue<AppEvent> eventQueue;
+std::mutex queueMutex;
+std::condition_variable eventCV;
+bool stopEventThread = false;
+
+void dispatchEvent(AppEvent e) {
+    std::lock_guard<std::mutex> lock(queueMutex);
+    eventQueue.push(e);
+    eventCV.notify_one();
+}
+
+void speakAsync(PiperSynthesizer& synth, const std::string& text, const std::string& outputPath) {
+    std::thread([=, &synth]() {
+        synth.synthesizeTextToFile(text, outputPath);
+        synth.playAudioFile(outputPath);
+    }).detach();
+}
 
 int main() {
     std::string modelPath = "../piper_models/en_US-amy-medium.onnx";
@@ -38,19 +60,33 @@ int main() {
     AppStateManager stateManager;
     AppStateMachine stateMachine(stateManager);
 
+    //event handler
+    std::thread eventThread([&]() {
+        while (true) {
+            std::unique_lock<std::mutex> lock(queueMutex);
+            eventCV.wait(lock, [&]() { return !eventQueue.empty() || stopEventThread; });
+
+            if (stopEventThread && eventQueue.empty()) break;
+
+            AppEvent e = eventQueue.front();
+            eventQueue.pop();
+            lock.unlock();
+
+            stateMachine.handleEvent(e);
+        }
+    });
 
     // Voice
     VoiceCommandHandler voiceCtrl(snake, app, synth, stateManager,API_KEY, CITY, [&](AppEvent e) {
-        stateMachine.handleEvent(e);
+        dispatchEvent(e);
     });
     
     auto& speechCtrl = voiceCtrl.getSpeechCtrl();
 
     stateManager.onEnter(AppState::TIME, [&]() {
         app.handleCommand("time");
-        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch","[unk]"});
-        synth.synthesizeTextToFile("time mode", outputPath);
-        synth.playAudioFile(outputPath);
+        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
+        speakAsync(synth, "time mode", outputPath);
     });
     stateManager.onExit(AppState::TIME, [&]() {
         app.shutdown();
@@ -58,9 +94,8 @@ int main() {
     stateManager.onEnter(AppState::GAME, [&]() {
         snake.start();
         speechCtrl.setCommandSet({"up", "down", "left", "right",
-            "time", "game", "counter", "weather", "mode", "switch","[unk]"});
-        synth.synthesizeTextToFile("game mode", outputPath);
-        synth.playAudioFile(outputPath);
+            "time", "game", "counter", "weather", "mode", "switch"});
+        speakAsync(synth, "game mode", outputPath);
     });
     stateManager.onExit(AppState::GAME, [&]() {
         snake.stop();
@@ -71,12 +106,10 @@ int main() {
             "four", "five", "six", "seven",
             "eight", "nine",
         "time", "game", "counter", "weather", "mode", "switch"});
-        synth.synthesizeTextToFile("counter mode", outputPath);
-        synth.playAudioFile(outputPath);
+        speakAsync(synth, "counter mode", outputPath);
 
         app.setTimerFinishedCallback([&]() {
-            synth.synthesizeTextToFile("counter finished", outputPath);
-            synth.playAudioFile(outputPath);
+            speakAsync(synth, "counter finished", outputPath);
         });
 
         app.handleCommand("timer");
@@ -87,9 +120,8 @@ int main() {
     });
     stateManager.onEnter(AppState::WEATHER, [&]() {
         app.handleCommand("temp");
-        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch","[unk]"});
-        synth.synthesizeTextToFile("weather mode", outputPath);
-        synth.playAudioFile(outputPath);
+        speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch"});
+        speakAsync(synth, "weather mode", outputPath);
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         WeatherWrapper weather(API_KEY, CITY);
         weather.updateWeather();
@@ -104,7 +136,7 @@ int main() {
     // MPU 
     MPU6050Ctrl mpuCtrl(13, "/dev/i2c-1", 0x68);
     MPUHandler mpuHandler([&](AppEvent e) {
-        stateMachine.handleEvent(e);
+        dispatchEvent(e);
     });
     mpuCtrl.setCallback(&mpuHandler);
 
@@ -116,22 +148,36 @@ int main() {
     // Initialisation
     if (!gestureCtrl.init() || !mpuCtrl.init()) {
         std::cerr << "[Main] sensor init fail" << std::endl;
+        {
+            std::lock_guard<std::mutex> lock(queueMutex);
+            stopEventThread = true;
+        }
+        eventCV.notify_one();
+        eventThread.join();
         return 1;
     }
-    speechCtrl.setCommandSet({"time", "game", "counter", "weather", "mode", "switch", "[unk]"});
-    voiceCtrl.start();
 
+    voiceCtrl.start();
+    speechCtrl.setInitialset({"time", "game", "counter", "weather", "mode", "switch"});
     std::cout << "[Main] initial done, time mode, waiting for events..." << std::endl;
-    
+
     std::string input;
     while (std::getline(std::cin, input)) {
         if (input == "quit") break;
-        else if (input == "time") stateMachine.handleEvent(AppEvent::EnterTime);
-        else if (input == "game") stateMachine.handleEvent(AppEvent::EnterGame);
-        else if (input == "counter") stateMachine.handleEvent(AppEvent::EnterCounter);
-        else if (input == "weather") stateMachine.handleEvent(AppEvent::EnterWeather);
+        else if (input == "time") dispatchEvent(AppEvent::EnterTime);
+        else if (input == "game") dispatchEvent(AppEvent::EnterGame);
+        else if (input == "counter") dispatchEvent(AppEvent::EnterCounter);
+        else if (input == "weather") dispatchEvent(AppEvent::EnterWeather);
     }
 
     voiceCtrl.stop();
+
+    {
+        std::lock_guard<std::mutex> lock(queueMutex);
+        stopEventThread = true;
+    }
+    eventCV.notify_one();
+    eventThread.join();
+
     return 0;
 }

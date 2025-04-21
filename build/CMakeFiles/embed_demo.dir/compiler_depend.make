@@ -640,6 +640,34 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_
   /usr/include/c++/12/ctime \
   /usr/include/c++/12/bits/parse_numbers.h \
   /usr/include/c++/12/chrono \
+  /usr/include/c++/12/queue \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_queue.h \
+  /usr/include/c++/12/mutex \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
+  /usr/include/c++/12/condition_variable \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/unistd.h \
+  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+  /usr/include/aarch64-linux-gnu/bits/environments.h \
+  /usr/include/aarch64-linux-gnu/bits/confname.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
   /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
   /home/newcomer233/Desktop/embed_work-main/include/patterns.h \
   /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
@@ -649,23 +677,16 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/ext/aligned_buffer.h \
   /usr/include/c++/12/bits/hashtable.h \
   /usr/include/c++/12/bits/hashtable_policy.h \
   /usr/include/c++/12/bits/enable_special_members.h \
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/unordered_map.h \
   /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/vector \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_vector.h \
-  /usr/include/c++/12/bits/stl_bvector.h \
-  /usr/include/c++/12/bits/vector.tcc \
   /usr/include/c++/12/array \
   /usr/include/c++/12/compare \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   /home/newcomer233/Desktop/embed_work-main/include/snake_game.h \
@@ -673,16 +694,8 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
   /home/newcomer233/Desktop/embed_work-main/include/MAX7219.h \
-  /usr/include/c++/12/mutex \
-  /usr/include/c++/12/bits/std_mutex.h \
-  /usr/include/c++/12/bits/unique_lock.h \
   /home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h \
   /home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h \
-  /usr/include/c++/12/condition_variable \
-  /usr/include/c++/12/bits/shared_ptr.h \
-  /usr/include/c++/12/bits/shared_ptr_base.h \
-  /usr/include/c++/12/bits/allocated_ptr.h \
-  /usr/include/c++/12/ext/concurrence.h \
   /usr/include/linux/i2c-dev.h \
   /usr/include/linux/types.h \
   /usr/lib/linux/uapi/arm64/asm/types.h \
@@ -816,15 +829,7 @@ CMakeFiles/embed_demo.dir/src/EMBED_main.cpp.o: /home/newcomer233/Desktop/embed_
   /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
   /home/newcomer233/Desktop/embed_work-main/include/app_controller.h \
   /home/newcomer233/Desktop/embed_work-main/include/PiperSynthesizer.h \
-  /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h \
-  /usr/include/unistd.h \
-  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
-  /usr/include/aarch64-linux-gnu/bits/environments.h \
-  /usr/include/aarch64-linux-gnu/bits/confname.h \
-  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
-  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h
+  /home/newcomer233/Desktop/embed_work-main/include/AppStateMachine.h
 
 CMakeFiles/embed_demo.dir/src/GestureHandler.cpp.o: /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp \
   /usr/include/stdc-predef.h \
@@ -2983,23 +2988,26 @@ CMakeFiles/embed_demo.dir/src/SpeechRecognizer.cpp.o: /home/newcomer233/Desktop/
   /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
-  /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
-  /usr/include/c++/12/iostream \
-  /usr/include/c++/12/ostream \
-  /usr/include/c++/12/ios \
+  /usr/include/c++/12/mutex \
   /usr/include/c++/12/exception \
   /usr/include/c++/12/bits/exception_ptr.h \
   /usr/include/c++/12/bits/cxxabi_init_exception.h \
   /usr/include/c++/12/bits/nested_exception.h \
-  /usr/include/c++/12/bits/ios_base.h \
-  /usr/include/c++/12/ext/atomicity.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
-  /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/12/bits/locale_classes.h \
-  /usr/include/c++/12/bits/locale_classes.tcc \
   /usr/include/c++/12/system_error \
   /usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h \
   /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
+  /home/newcomer233/Desktop/embed_work-main/include/vosk_api.h \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/bits/locale_classes.tcc \
   /usr/include/c++/12/streambuf \
   /usr/include/c++/12/bits/streambuf.tcc \
   /usr/include/c++/12/bits/basic_ios.h \
@@ -4609,8 +4617,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/bits/stl_stack.h:
 
-/usr/include/c++/12/bits/stl_deque.h:
-
 /usr/include/c++/12/bitset:
 
 /home/newcomer233/Desktop/embed_work-main/include/keywords.h:
@@ -4643,18 +4649,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /home/newcomer233/Desktop/embed_work-main/src/GestureHandler.cpp:
 
-/usr/include/aarch64-linux-gnu/bits/unistd_ext.h:
-
-/home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp:
-
-/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/unistd.h:
-
 /home/newcomer233/Desktop/embed_work-main/include/SpeechRecognizer.h:
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/spdlog.h:
@@ -4666,10 +4660,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/include/MPUHandler.h:
 
 /usr/include/c++/12/bits/fs_dir.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/c++/12/codecvt:
 
 /usr/include/c++/12/bits/locale_facets_nonio.tcc:
 
@@ -4694,12 +4684,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/version:
 
 /usr/include/c++/12/bits/indirect_array.h:
-
-/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger.h:
-
-/usr/include/aarch64-linux-gnu/bits/environments.h:
-
-/usr/include/c++/12/bits/mask_array.h:
 
 /home/newcomer233/Desktop/embed_work-main/include/utf8/checked.h:
 
@@ -4817,6 +4801,20 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/gpiod.h:
 
+/home/newcomer233/Desktop/embed_work-main/src/app_controller.cpp:
+
+/usr/lib/linux/uapi/arm64/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/aarch64-linux-gnu/bits/fcntl.h:
+
+/usr/lib/linux/uapi/arm64/asm/types.h:
+
+/home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h:
+
 /usr/include/c++/12/ostream:
 
 /usr/include/alloca.h:
@@ -4845,10 +4843,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
 
-/usr/include/aarch64-linux-gnu/bits/fcntl.h:
-
-/usr/lib/linux/uapi/arm64/asm/types.h:
-
 /usr/include/c++/12/bits/postypes.h:
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h:
@@ -4860,6 +4854,14 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/include/utf8.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
+
+/home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/c++/12/bits/cxxabi_init_exception.h:
+
+/usr/include/aarch64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/aarch64-linux-gnu/bits/termios-misc.h:
 
@@ -4885,9 +4887,13 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/ext/concurrence.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
+/home/newcomer233/Desktop/embed_work-main/include/utf8/core.h:
 
-/usr/include/asm-generic/int-ll64.h:
+/usr/include/linux/i2c-dev.h:
+
+/usr/include/c++/12/iosfwd:
+
+/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/12/bits/quoted_string.h:
 
@@ -4928,6 +4934,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/cstddef:
 
 /usr/include/c++/12/cerrno:
+
+/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
@@ -4971,6 +4979,14 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/bits/stl_relops.h:
 
+/home/newcomer233/Desktop/embed_work-main/include/utf8/cpp17.h:
+
+/usr/include/c++/12/bits/fs_ops.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/c++/12/bits/stl_heap.h:
+
 /home/newcomer233/Desktop/embed_work-main/include/patterns.h:
 
 /home/newcomer233/Desktop/embed_work-main/include/snake.h:
@@ -4982,10 +4998,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/bits/locale_classes.tcc:
 
 /usr/include/c++/12/bits/stl_iterator.h:
-
-/home/newcomer233/Desktop/embed_work-main/src/app_controller.cpp:
-
-/usr/lib/linux/uapi/arm64/asm/posix_types.h:
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/sink.h:
 
@@ -5011,15 +5023,9 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/utility:
 
-/home/newcomer233/Desktop/embed_work-main/include/utf8/cpp17.h:
-
-/usr/include/c++/12/bits/fs_ops.h:
-
-/usr/include/c++/12/bits/stl_heap.h:
-
-/usr/include/asm-generic/posix_types.h:
-
 /usr/include/c++/12/iostream:
+
+/usr/include/c++/12/bits/stl_queue.h:
 
 /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h:
 
@@ -5055,17 +5061,17 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/bits/std_function.h:
 
-/usr/include/c++/12/bits/regex_executor.tcc:
-
-/usr/include/c++/12/bits/deque.tcc:
-
-/usr/include/linux/spi/spidev.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h:
-
 /usr/include/c++/12/type_traits:
 
 /usr/include/c++/12/bits/uses_allocator.h:
+
+/usr/include/aarch64-linux-gnu/bits/socket_type.h:
+
+/home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h:
+
+/usr/include/aarch64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/c++/12/bits/stringfwd.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h:
 
@@ -5097,6 +5103,12 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/lib/linux/uapi/arm64/asm/bitsperlong.h:
+
+/usr/include/aarch64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/12/typeinfo:
+
 /home/newcomer233/Desktop/embed_work-main/src/piper.cpp:
 
 /usr/include/c++/12/bits/stl_tree.h:
@@ -5106,6 +5118,14 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/ios:
 
 /usr/include/c++/12/bits/new_allocator.h:
+
+/usr/include/c++/12/bits/regex_executor.tcc:
+
+/usr/include/linux/spi/spidev.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/12/bits/deque.tcc:
 
 /home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/sinks/sink-inl.h:
 
@@ -5157,6 +5177,10 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/bits/alloc_traits.h:
 
+/home/newcomer233/Desktop/embed_work-main/src/PAJ7260U2.cpp:
+
+/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
+
 /usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
@@ -5174,12 +5198,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /home/newcomer233/Desktop/embed_work-main/lib/onnxruntime-linux-aarch64-1.21.0/include/onnxruntime_float16.h:
 
 /usr/include/c++/12/compare:
-
-/home/newcomer233/Desktop/embed_work-main/lib/Linux_aarch64/piper_phonemize/include/piper-phonemize/phonemize.hpp:
-
-/usr/include/c++/12/bits/cxxabi_init_exception.h:
-
-/usr/include/linux/stddef.h:
 
 /usr/include/aarch64-linux-gnu/sys/cdefs.h:
 
@@ -5212,6 +5230,8 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h:
 
@@ -5276,12 +5296,6 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 /usr/include/c++/12/bits/stl_algobase.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h:
-
-/home/newcomer233/Desktop/embed_work-main/include/utf8/core.h:
-
-/usr/include/c++/12/iosfwd:
-
-/usr/include/linux/i2c-dev.h:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
 
@@ -5401,6 +5415,12 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/ext/string_conversions.h:
 
+/usr/include/c++/12/bits/stl_deque.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/c++/12/cstdio:
+
 /usr/lib/linux/uapi/arm64/asm/unistd_64.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
@@ -5495,25 +5515,15 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/chrono:
 
-/usr/include/aarch64-linux-gnu/bits/termios-c_cc.h:
+/usr/include/c++/12/queue:
 
-/usr/include/aarch64-linux-gnu/bits/uio_lim.h:
+/usr/include/asm-generic/bitsperlong.h:
 
-/usr/include/c++/12/bits/gslice_array.h:
+/usr/include/asm-generic/types.h:
 
-/usr/include/c++/12/bits/atomic_lockfree_defines.h:
+/usr/include/c++/12/ext/type_traits.h:
 
-/usr/include/aarch64-linux-gnu/bits/socket_type.h:
-
-/usr/include/aarch64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/c++/12/bits/stringfwd.h:
-
-/home/newcomer233/Desktop/embed_work-main/include/SensorCtrl.h:
-
-/home/newcomer233/Desktop/embed_work-main/include/PAJ7260U2.h:
-
-/usr/include/linux/posix_types.h:
+/usr/include/c++/12/deque:
 
 /usr/include/aarch64-linux-gnu/bits/time64.h:
 
@@ -5523,26 +5533,28 @@ CMakeFiles/embed_demo.dir/src/weather.cpp.o: /home/newcomer233/Desktop/embed_wor
 
 /usr/include/c++/12/bits/shared_ptr_base.h:
 
-/usr/include/aarch64-linux-gnu/bits/confname.h:
-
 /usr/include/c++/12/bits/nested_exception.h:
+
+/usr/include/aarch64-linux-gnu/bits/confname.h:
 
 /usr/include/c++/12/bits/allocated_ptr.h:
 
-/usr/include/c++/12/cstdio:
+/usr/include/unistd.h:
 
-/usr/include/linux/types.h:
+/home/newcomer233/Desktop/embed_work-main/lib/si/include/spdlog/logger.h:
 
-/usr/include/aarch64-linux-gnu/bits/byteswap.h:
+/usr/include/c++/12/bits/mask_array.h:
 
-/usr/include/c++/12/typeinfo:
+/usr/include/aarch64-linux-gnu/bits/environments.h:
 
-/usr/lib/linux/uapi/arm64/asm/bitsperlong.h:
+/usr/include/c++/12/codecvt:
 
-/usr/include/c++/12/deque:
+/usr/include/linux/close_range.h:
 
-/usr/include/asm-generic/types.h:
+/usr/include/aarch64-linux-gnu/bits/termios-c_cc.h:
 
-/usr/include/c++/12/ext/type_traits.h:
+/usr/include/aarch64-linux-gnu/bits/uio_lim.h:
 
-/usr/include/asm-generic/bitsperlong.h:
+/usr/include/c++/12/bits/gslice_array.h:
+
+/usr/include/c++/12/bits/atomic_lockfree_defines.h:
