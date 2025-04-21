@@ -1,0 +1,20 @@
+March 4th 
+Select a proper method for voice recognition online. Finally choose Google API for its accuracy. Then in Google Project ,create and use a API. 
+
+March 6th-10th 
+Write C++ codes to call  API. Employ libcurl for HTTP requests and use jsoncpp to parse the API responses. And all of the audio file should be changed to 16-bit PCM WAV. Record a short voice as requested as test file. To the codes, the json could not be recognized. Then turn to Google  Project Dest, the audio file can be recognized well. Some problems existed in the programs.
+
+March 11st to 14th 
+After test, theJSON of the api could not be recognized due to the path of this file. So fix the path of JSON. Then the it still not could work. Some improvements should be made to generate JWT so that the private key can be read correctly. 
+Then in the main function  add test function to print the private key to test it.
+
+March 18th
+Add another function to the system .Use WebRTC VAD to detect the human voice only when the human voice is detected the voice can be recorded. 
+The testing result is bad, the human voice can not be distinguished even in a very quiet environment. To solve it, set the VAD model to 3 so that it can adjust to noise environment.
+
+March 20th
+Introduce the function of keyword detection. Just put some basic key words in a database. The program detects keywords by checking if the recognized text contains any word from a predefined keyword list. If a match is found, it saves and prints the keyword.
+
+
+April 5th
+Google has high network requirements and cannot be deployed locally. So decide to use vosk. Successfully ran the Vosk demo programs. The speech recognition worked well in offline mode, and latency was low. Tested with several short audio clips, and the results were accurate for basic commands.
