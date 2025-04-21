@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 UoG embed Team 27
+Copyright (c) 2025 UoG ENG5220 Team 27
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

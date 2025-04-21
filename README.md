@@ -1,29 +1,4 @@
-# embed_work
-for UoG Team 27 embed work
-#
-This project and its source code are part of the coursework for ENG5220: Real-Time Embedded Programming (2024–25) at the University of Glasgow.
-Until the project is officially completed, in principle, the code is not available for use outside UoG Team 27.
 
-PS: Honestly, would anyone even want code from students like us at the bottom of the food chain?
-Even feeding it to an AI might get a "meh, too noob" response (tears).
-
-PPS: On second thought... maybe we should feed it to an AI—to help spot AI's bugs! Haha.
-
-2025_04_14_01:02
-
-I finally know why told us don't use GPT4..when translate PPS sentence to English "maybe we should feed it to an AI—to help spot bugs!"  emmmm, AI still know nothing about humans thinking.
-
-
-
-We utilize the following open-source projects in our system:
-
-VOSK - A lightweight and accurate offline speech recognition toolkit.
-  https://github.com/alphacep/vosk-api
-
-Piper - A fast and high-quality neural text-to-speech (TTS) system optimized for local execution, especially on embedded devices like the Raspberry Pi.
-  https://github.com/rhasspy/piper
-
-These components enable our system to perform real-time, local speech recognition and synthesis without relying on cloud services.
 
 # PiGrid: Voice & Gesture Controlled Real-Time Smart Display
 
@@ -68,11 +43,78 @@ Activate modes and features using the following voice commands:
 *   **PAJ7620U2** Gesture Recognition Sensor Module x 1
 *   **MPU6050** Gyroscope/Accelerometer Module x 1
 *   **Bluetooth Earphone/Headset with Microphone** x 1 
-*   **Jumper Wires** x  
 
-*(wiring diagram)*
+###  Wiring Overview
 
-## 4. Division of Labour
+| Device        | Interface | RPi Bus/Pin                | Note                                  |
+|---------------|-----------|-----------------------------|---------------------------------------|
+| **MPU6050**   | I2C       | `I2C-1` (`/dev/i2c-1`)      | Address `0x68`, INT → GPIO 13         |
+| **PAJ7620U2** | I2C       | `I2C-3` (`/dev/i2c-3`)      | Address `0x73`, INT → GPIO 12         |
+| **MAX7219**   | SPI       | `SPI0.0` (`/dev/spidev0.0`) | MOSI: GPIO 10, CLK: GPIO 11, CS: GPIO 8 |
+
+---
+
+###  Wiring Details
+
+####  MPU6050 (I2C-1)
+- `VCC` → 3.3V / 5V  
+- `GND` → GND  
+- `SCL` → GPIO 3 (I2C-1 SCL)  
+- `SDA` → GPIO 2 (I2C-1 SDA)  
+- `INT` → GPIO 13  
+
+####  PAJ7620U2 (I2C-3)
+- `VCC` → 3.3V / 5V  
+- `GND` → GND  
+- `SCL` → I2C-3 SCL 
+- `SDA` → I2C-3 SDA  
+- `INT` → GPIO 12  
+
+> I2C-3 is not enabled by default on Raspberry Pi. You may need to configure it using a device tree overlay or software I2C.
+
+####  MAX7219 (SPI0.0)
+- `VCC` → 5V  
+- `GND` → GND  
+- `DIN` → GPIO 10 (SPI MOSI)  
+- `CLK` → GPIO 11 (SPI SCLK)  
+- `CS`  → GPIO 8 (SPI CE0)
+
+## 4. Software Requirements
+
+The following tools, libraries, and components are required to build and run PiGrid.  
+All dependencies are installed automatically via the provided Dockerfile.  
+Alternatively, they can be installed manually as listed below:
+
+###  Build Tools
+
+- `g++` – GNU C++ compiler  
+- `cmake` – Cross-platform build system generator
+
+###  System Libraries (via APT)
+
+- `libgpiod-dev` – For GPIO event handling (used by PAJ7620U2 and MPU6050)
+- `libcurl4-openssl-dev` – Used for fetching live weather data via OpenWeather API
+- `libjsoncpp-dev` – Used for parsing OpenWeather API JSON responses
+- `espeak-ng` – Lightweight speech synthesis backend (for voice response)
+
+Install them manually (if needed):
+
+```bash
+sudo apt update
+sudo apt install g++ cmake libgpiod-dev libcurl4-openssl-dev libjsoncpp-dev espeak-ng
+```
+Following open-source projects were used in our system, allowing performimg real-time local speech recognition and synthesis without relying on cloud services:
+
+VOSK - A lightweight and accurate offline speech recognition toolkit.
+  https://github.com/alphacep/vosk-api
+
+Piper - A fast and high-quality neural text-to-speech (TTS) system optimized for local execution, especially on embedded devices like the Raspberry Pi.
+  https://github.com/rhasspy/piper
+
+Sometimes, directly pulling from this project may cause issues with onnxruntime or piper-phonemize_linux_aarch64, potentially leaving them broken. A .zip file containing these libraries is provided in the lib/ directory.   
+Also, you can download them from the official ONNX Runtime website or the Piper project.
+
+## 5. Division of Labour
 
 **Zehua Xu:** Project Integration, Sensor Interfacing & Debugging  
 **Huinan Guo:** Weather API Integration & Data Processing  
